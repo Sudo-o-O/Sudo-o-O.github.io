@@ -1,107 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Matthew R. Gibbs | Introduction</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matthew R. Gibbs | Glorious Misfit — Introduction</title>
 
-  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header>
-    <h1>Matthew R. Gibbs | Glorious Misfit</h1>
-  </header>
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <main>
-    <h2>Introduction</h2>
+  <body>
+    <header>
+      <h1>Matthew R. Gibbs | Glorious Misfit</h1>
+    </header>
 
-    <p>
-      I understand that what I put here is publicly available on the web and I won’t put anything here I don’t want
-      the public to see. — MRG — 1/13/2026
-    </p>
+    <main>
+      <h2>Introduction</h2>
 
-    <figure>
-      <img src="images/matthew-gibbs.jpeg" alt="Photo of Matthew R. Gibbs" width="800" height="800">
-      <figcaption>Photo of Matthew R. Gibbs</figcaption>
-    </figure>
-
-    <section>
-      <h3>Personal Statement</h3>
       <p>
-        I’m a 30-year-old senior at UNC Charlotte pursuing a double major in Computer Science (Information Technology
-        concentration) and Japanese. I enjoy working across both frontend and backend development, building web
-        applications, and gaining hands-on experience with virtual machines, networking, and server infrastructure.
+        I understand that what I put here is publicly available on the web and I
+        won’t put anything here I don’t want the public to see. — MRG —
+        1/13/2026
       </p>
-    </section>
 
-    <section>
-      <h3>Highlights</h3>
-      <ul>
-        <li><strong>Personal background:</strong> I enjoy anime, reading, 3D printing, and experimenting with emulation software. I learn by building, testing, and breaking things.</li>
-        <li><strong>Professional background:</strong> I work in customer service in the insurance industry, translating complex details into clear, understandable information for clients.</li>
-        <li><strong>Academic background:</strong> Senior at UNC Charlotte completing a double major in Computer Science (IT) and Japanese.</li>
-        <li><strong>Academic & career goals:</strong> After finishing my undergraduate degrees, I plan to pursue an MS in Management and work as a technical liaison between technical teams and non-technical stakeholders.</li>
-        <li><strong>Background in this subject:</strong> I was introduced to web development in high school while helping build and maintain a website for my school’s robotics team.</li>
-        <li><strong>Work setup:</strong> Primary: 16-inch MacBook Pro (M4) with two external monitors. Backup: Mini PC.</li>
-        <li><strong>Fun / interesting fact:</strong> My heart has stopped four times over the course of my life, which has given me a strong appreciation for resilience and persistence.</li>
-        <li><strong>Something else I’d like to share:</strong> I’m one-quarter Native American.</li>
-      </ul>
-    </section>
+      <figure>
+        <img
+          src="images/matthew-gibbs.jpeg"
+          alt="Photo of Matthew R. Gibbs"
+          width="800"
+          height="800"
+        />
+        <figcaption>Photo of Matthew R. Gibbs</figcaption>
+      </figure>
 
-    <section>
-      <h3>Courses I’m Taking &amp; Why</h3>
-      <ol>
-        <li>
-          Computer Science
-          <ol>
-            <li><strong>ITSC 3146</strong> – Introduction to Operating Systems and Networking (Required; OS fundamentals and networking concepts.)</li>
-            <li><strong>ITSC 3160</strong> – Database Design and Implementation (Required; data modeling and relational databases.)</li>
-            <li><strong>ITIS 3135</strong> – Front-End Web Application Development (Required; modern frontend and user-centered design.)</li>
-          </ol>
-        </li>
-        <li>
-          Japanese
-          <ol>
-            <li><strong>JAPN 3201</strong> – Upper Intermediate Japanese (Major requirement; advanced reading, writing, and professional communication.)</li>
-          </ol>
-        </li>
-      </ol>
-    </section>
+      <section>
+        <h3>Personal Statement</h3>
+        <p>
+          I’m a 30-year-old senior at UNC Charlotte pursuing a double major in
+          Computer Science (Information Technology concentration) and Japanese.
+          I enjoy working across both frontend and backend development, building
+          web applications, and gaining hands-on experience with virtual
+          machines, networking, and server infrastructure.
+        </p>
+      </section>
 
-    <section>
-      <h3>Quote</h3>
-      <blockquote>
-        “Fall seven times, stand up eight.”
-        <cite>— Japanese Proverb</cite>
-      </blockquote>
-    </section>
+      <section>
+        <h3>Highlights</h3>
+        <ul>
+          <li>
+            <strong>Personal background:</strong> I enjoy anime, reading, 3D
+            printing, and experimenting with emulation software. I learn by
+            building, testing, and breaking things.
+          </li>
+          <li>
+            <strong>Professional background:</strong> I work in customer service
+            in the insurance industry, translating complex details into clear,
+            understandable information for clients.
+          </li>
+          <li>
+            <strong>Academic background:</strong> Senior at UNC Charlotte
+            completing a double major in Computer Science (IT) and Japanese.
+          </li>
+          <li>
+            <strong>Academic &amp; career goals:</strong> After finishing my
+            undergraduate degrees, I plan to pursue an MS in Management and work
+            as a technical liaison between technical teams and non-technical
+            stakeholders.
+          </li>
+          <li>
+            <strong>Background in this subject:</strong> I was introduced to web
+            development in high school while helping build and maintain a
+            website for my school’s robotics team.
+          </li>
+          <li>
+            <strong>Work setup:</strong> Primary: 16-inch MacBook Pro (M4) with
+            two external monitors. Backup: Mini PC.
+          </li>
+          <li>
+            <strong>Fun / interesting fact:</strong> My heart has stopped four
+            times over the course of my life, which has given me a strong
+            appreciation for resilience and persistence.
+          </li>
+          <li>
+            <strong>Something else I’d like to share:</strong> I’m one-quarter
+            Native American.
+          </li>
+        </ul>
+      </section>
 
-    <section>
-      <h3>Navigation</h3>
+      <section>
+        <h3>Courses I’m Taking &amp; Why</h3>
+        <ol>
+          <li>
+            Computer Science
+            <ol>
+              <li>
+                <strong>ITSC 3146</strong> – Introduction to Operating Systems
+                and Networking (Required; OS fundamentals and networking
+                concepts.)
+              </li>
+              <li>
+                <strong>ITSC 3160</strong> – Database Design and Implementation
+                (Required; data modeling and relational databases.)
+              </li>
+              <li>
+                <strong>ITIS 3135</strong> – Front-End Web Application
+                Development (Required; modern frontend and user-centered
+                design.)
+              </li>
+            </ol>
+          </li>
+          <li>
+            Japanese
+            <ol>
+              <li>
+                <strong>JAPN 3201</strong> – Upper Intermediate Japanese (Major
+                requirement; advanced reading, writing, and professional
+                communication.)
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Quote</h3>
+        <blockquote>
+          “Fall seven times, stand up eight.”
+          <cite>— Japanese Proverb</cite>
+        </blockquote>
+      </section>
+
+      <section>
+        <h3>Navigation</h3>
+        <p>
+          <a href="index.html">Back to home page</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="Footer links">
+        <a href="itis3135/">ITIS3135</a>
+        <span> | </span>
+        <a href="https://github.com/Sudo-o-O">GitHub</a>
+        <span> | </span>
+        <a href="https://webpages.charlotte.edu/mgibbs13">CLT Web</a>
+        <span> | </span>
+        <a href="https://sudo-o-o.github.io/">GitHub.io</a>
+        <span> | </span>
+        <a href="https://www.linkedin.com/in/gibbsrmatthew/">LinkedIn</a>
+        <span> | </span>
+        <a href="https://www.freecodecamp.org/Glorious-Misfit">freeCodeCamp</a>
+      </nav>
+
       <p>
-        <a href="index.html">Back to home page</a>
+        <a href="https://validator.w3.org/check?uri=referer">Validate HTML</a>
       </p>
-    </section>
-  </main>
-
-  <footer>
-    <nav aria-label="Footer links">
-      <a href="itis3135/">ITIS3135</a>
-      <span> | </span>
-      <a href="https://github.com/Sudo-o-O">GitHub</a>
-      <span> | </span>
-      <a href="https://webpages.charlotte.edu/mgibbs13">CLT Web</a>
-      <span> | </span>
-      <a href="https://sudo-o-o.github.io/">GitHub.io</a>
-      <span> | </span>
-      <a href="https://www.linkedin.com/in/gibbsrmatthew/">LinkedIn</a>
-      <span> | </span>
-      <a href="https://www.freecodecamp.org/Glorious-Misfit">freeCodeCamp</a>
-    </nav>
-
-    <p>
-      <a href="https://validator.w3.org/check?uri=referer">Validate HTML</a>
-    </p>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
