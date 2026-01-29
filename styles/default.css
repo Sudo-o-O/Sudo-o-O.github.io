@@ -1,0 +1,84 @@
+/* Personal Site: /styles/default.css */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0f172a; /* background color */
+  color: #e5e7eb; /* foreground color */
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  max-width: 900px; /* prevents stretching on wide screens */
+  margin: 0 auto; /* centers the content block */
+  padding: 1rem 1.25rem;
+}
+
+header {
+  background: #111827;
+  border-bottom: 2px solid #334155;
+}
+
+h1 {
+  font-family:
+    "Playfair Display", Georgia, serif; /* heading font different from body */
+  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem 0;
+}
+
+h2,
+h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  color: #93c5fd;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  background: #0b1220;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #334155;
+}
+
+figcaption {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+footer {
+  border-top: 2px solid #334155;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
