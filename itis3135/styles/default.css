@@ -125,6 +125,16 @@ footer {
   color: var(--footer-text);
   font-size: 0.95rem;
 }
+/* Footer links not readable without this for contrast */
+footer a {
+  color: var(--link); /* readable link color */
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: var(--link-hover); /* hover contrast */
+}
 
 /* Automatic dark mode: change variables only */
 @media (color-scheme: dark) {
