@@ -1,4 +1,14 @@
-/* Personal Site: /styles/default.css */
+/*
+Color palette sourced from Coolors:
+https://coolors.co/963484-3066be-60afff-28c2ff-2af5ff
+
+Palette:
+#963484 – deep magenta
+#3066BE – strong blue
+#60AFFF – light blue
+#28C2FF – cyan blue
+#2AF5FF – bright aqua
+*/
 
 html {
   font-size: 100%;
@@ -6,8 +16,8 @@ html {
 
 body {
   margin: 0;
-  background: #0f172a; /* background color */
-  color: #e5e7eb; /* foreground color */
+  background: #3066be; /* strong blue */
+  color: #2af5ff; /* bright aqua text */
   font-family:
     "Inter",
     system-ui,
@@ -22,42 +32,47 @@ body {
 header,
 main,
 footer {
-  max-width: 900px; /* prevents stretching on wide screens */
-  margin: 0 auto; /* centers the content block */
+  max-width: 900px;
+  margin: 0 auto;
   padding: 1rem 1.25rem;
 }
 
 header {
-  background: #111827;
-  border-bottom: 2px solid #334155;
+  background: #963484; /* deep magenta */
+  border-bottom: 3px solid #2af5ff;
 }
 
 h1 {
-  font-family:
-    "Playfair Display", Georgia, serif; /* heading font different from body */
+  font-family: "Playfair Display", Georgia, serif;
   letter-spacing: 0.5px;
   margin: 0 0 0.5rem 0;
+  color: #2af5ff;
 }
 
 h2,
 h3 {
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
+  color: #60afff;
 }
 
 nav a {
-  color: #93c5fd;
+  color: #2af5ff;
   text-decoration: none;
   margin-right: 1rem;
   font-weight: 600;
 }
 
 nav a:hover {
+  color: #28c2ff;
   text-decoration: underline;
 }
 
 main {
-  background: #0b1220;
+  background: #60afff; /* light blue */
+  color: #3066be; /* readable dark text */
+  border-radius: 12px;
+  margin-top: 1rem;
 }
 
 figure {
@@ -68,17 +83,45 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 2px solid #334155;
+  border: 3px solid #963484;
 }
 
 figcaption {
-  color: #cbd5e1;
+  color: #3066be;
   font-size: 0.95rem;
   margin-top: 0.5rem;
 }
 
 footer {
-  border-top: 2px solid #334155;
-  color: #cbd5e1;
+  border-top: 3px solid #2af5ff;
+  color: #2af5ff;
   font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+/* Optional automatic dark mode */
+/* I thought I would try to get dark mode working */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #963484;
+    color: #2af5ff;
+  }
+
+  header {
+    background: #3066be;
+  }
+
+  main {
+    background: #3066be;
+    color: #2af5ff;
+  }
+
+  h2,
+  h3 {
+    color: #28c2ff;
+  }
+
+  figcaption {
+    color: #2af5ff;
+  }
 }
