@@ -10,14 +10,38 @@ Palette:
 #2E2C2F – charcoal
 */
 
+/* Theme tokens (avoids duplicate selectors like h2 in dark mode)
+I believe this should be a solid fix the the issur. */
+:root {
+  --page-bg: #f3e8ee;
+  --text: #2e2c2f;
+
+  --header-bg: #475b63;
+  --accent: #729b79;
+
+  --main-bg: #bacdb0;
+
+  --nav-link: #f3e8ee;
+  --nav-hover: #bacdb0;
+
+  --h2-border: #729b79;
+
+  --link: #475b63;
+  --link-hover: #729b79;
+
+  --img-border: #729b79;
+  --footer-text: #2e2c2f;
+  --footer-border: #729b79;
+}
+
 html {
   font-size: 100%;
 }
 
 body {
   margin: 0;
-  background: #f3e8ee;
-  color: #2e2c2f;
+  background: var(--page-bg);
+  color: var(--text);
   font-family:
     "Roboto",
     system-ui,
@@ -37,39 +61,40 @@ footer {
 }
 
 header {
-  background: #475b63;
-  border-bottom: 4px solid #729b79;
+  background: var(--header-bg);
+  border-bottom: 4px solid var(--accent);
 }
 
 h1 {
   font-family: "Space Grotesk", "Roboto", Arial, sans-serif;
   letter-spacing: 1px;
   margin: 0 0 0.5rem 0;
-  color: #f3e8ee;
-}
-
-h2 {
-  border-bottom: 2px solid #729b79;
-  padding-bottom: 0.25rem;
+  color: var(--nav-link);
 }
 
 nav a {
-  color: #f3e8ee;
+  color: var(--nav-link);
   text-decoration: none;
   margin-right: 1rem;
   font-weight: 600;
 }
 
 nav a:hover {
-  color: #bacdb0;
+  color: var(--nav-hover);
   text-decoration: underline;
 }
 
 main {
-  background: #bacdb0;
+  background: var(--main-bg);
   border-radius: 12px;
   margin-top: 1rem;
   padding: 1rem 1.25rem;
+}
+
+/* h2 defined only once */
+h2 {
+  border-bottom: 2px solid var(--h2-border);
+  padding-bottom: 0.25rem;
 }
 
 ul,
@@ -78,12 +103,12 @@ ol {
 }
 
 a {
-  color: #475b63;
+  color: var(--link);
   font-weight: 600;
 }
 
 a:hover {
-  color: #729b79;
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
@@ -91,59 +116,37 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 2px solid #729b79;
+  border: 2px solid var(--img-border);
 }
 
 footer {
   margin-top: 1rem;
-  border-top: 2px solid #729b79;
-  color: #2e2c2f;
+  border-top: 2px solid var(--footer-border);
+  color: var(--footer-text);
   font-size: 0.95rem;
 }
 
-/* Automatic dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #2e2c2f;
-    color: #f3e8ee;
-  }
+/* Automatic dark mode: change variables only */
+@media (color-scheme: dark) {
+  :root {
+    --page-bg: #2e2c2f;
+    --text: #f3e8ee;
 
-  header {
-    background: #475b63;
-    border-bottom: 4px solid #bacdb0;
-  }
+    --header-bg: #475b63;
+    --accent: #bacdb0;
 
-  nav a {
-    color: #f3e8ee;
-  }
+    --main-bg: #475b63;
 
-  nav a:hover {
-    color: #bacdb0;
-  }
+    --nav-link: #f3e8ee;
+    --nav-hover: #bacdb0;
 
-  main {
-    background: #475b63;
-    color: #f3e8ee;
-  }
+    --h2-border: #bacdb0;
 
-  h2 {
-    border-bottom: 2px solid #bacdb0;
-  }
+    --link: #f3e8ee;
+    --link-hover: #bacdb0;
 
-  a {
-    color: #f3e8ee;
-  }
-
-  a:hover {
-    color: #bacdb0;
-  }
-
-  img {
-    border: 2px solid #bacdb0;
-  }
-
-  footer {
-    border-top: 2px solid #bacdb0;
-    color: #f3e8ee;
+    --img-border: #bacdb0;
+    --footer-text: #f3e8ee;
+    --footer-border: #bacdb0;
   }
 }
