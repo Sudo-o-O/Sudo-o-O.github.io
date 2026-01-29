@@ -1,13 +1,13 @@
 /*
 Color palette sourced from Coolors:
-https://coolors.co/963484-3066be-60afff-28c2ff-2af5ff
+https://coolors.co/9381ff-b8b8ff-f8f7ff-ffeedd-ffd8be
 
 Palette:
-#963484 – deep magenta
-#3066BE – strong blue
-#60AFFF – light blue
-#28C2FF – cyan blue
-#2AF5FF – bright aqua
+#9381FF – soft violet
+#B8B8FF – pale lavender
+#F8F7FF – near white
+#FFEEDD – warm cream
+#FFD8BE – peach
 */
 
 html {
@@ -16,8 +16,8 @@ html {
 
 body {
   margin: 0;
-  background: #3066be; /* strong blue */
-  color: #2af5ff; /* bright aqua text */
+  background: #f8f7ff; /* near white */
+  color: #2e2e3a; /* dark neutral for readability */
   font-family:
     "Inter",
     system-ui,
@@ -38,41 +38,41 @@ footer {
 }
 
 header {
-  background: #963484; /* deep magenta */
-  border-bottom: 3px solid #2af5ff;
+  background: #9381ff; /* soft violet */
+  border-bottom: 3px solid #b8b8ff;
 }
 
 h1 {
   font-family: "Playfair Display", Georgia, serif;
   letter-spacing: 0.5px;
   margin: 0 0 0.5rem 0;
-  color: #2af5ff;
+  color: #f8f7ff;
 }
 
 h2,
 h3 {
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #60afff;
+  color: #9381ff;
 }
 
 nav a {
-  color: #2af5ff;
+  color: #f8f7ff;
   text-decoration: none;
   margin-right: 1rem;
   font-weight: 600;
 }
 
 nav a:hover {
-  color: #28c2ff;
+  color: #ffd8be;
   text-decoration: underline;
 }
 
 main {
-  background: #60afff; /* light blue */
-  color: #3066be; /* readable dark text */
+  background: #ffeedd; /* warm cream */
   border-radius: 12px;
   margin-top: 1rem;
+  color: #2e2e3a;
 }
 
 figure {
@@ -83,45 +83,48 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 3px solid #963484;
+  border: 3px solid #b8b8ff;
 }
 
 figcaption {
-  color: #3066be;
+  color: #2e2e3a;
   font-size: 0.95rem;
   margin-top: 0.5rem;
 }
 
 footer {
-  border-top: 3px solid #2af5ff;
-  color: #2af5ff;
+  border-top: 3px solid #b8b8ff;
+  color: #2e2e3a;
   font-size: 0.95rem;
   margin-top: 1rem;
 }
 
-/* Optional automatic dark mode */
-/* I thought I would try to get dark mode working */
+/* Automatic dark mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background: #963484;
-    color: #2af5ff;
+    background: #2e2e3a;
+    color: #f8f7ff;
   }
 
   header {
-    background: #3066be;
+    background: #9381ff;
   }
 
   main {
-    background: #3066be;
-    color: #2af5ff;
+    background: #3a3a55;
+    color: #f8f7ff;
   }
 
   h2,
   h3 {
-    color: #28c2ff;
+    color: #b8b8ff;
   }
 
   figcaption {
-    color: #2af5ff;
+    color: #f8f7ff;
+  }
+
+  footer {
+    color: #f8f7ff;
   }
 }
