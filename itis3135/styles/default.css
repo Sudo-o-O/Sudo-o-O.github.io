@@ -1,9 +1,24 @@
-/* Course Site: /itis3135/styles/default.css */
+/*
+Color palette sourced from Coolors:
+https://coolors.co/dbcfb0-bfc8ad-90b494-718f94-545775
+
+Palette:
+#DBCFB0 – light tan
+#BFC8AD – sage
+#90B494 – soft green
+#718F94 – blue-gray
+#545775 – deep slate
+*/
+
+/* Light mode defaults */
+html {
+  font-size: 100%;
+}
 
 body {
   margin: 0;
-  background: #f8fafc; /* light background */
-  color: #0f172a; /* dark text */
+  background: #dbcfb0; /* light tan */
+  color: #545775; /* deep slate */
   font-family:
     "Roboto",
     system-ui,
@@ -23,38 +38,38 @@ footer {
 }
 
 header {
-  background: #ffffff;
-  border-bottom: 4px solid #22c55e; /* strong accent */
+  background: #718f94; /* blue-gray */
+  border-bottom: 4px solid #90b494; /* soft green */
 }
 
 h1 {
   font-family: "Space Grotesk", "Roboto", Arial, sans-serif;
-  text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 0.5rem 0;
+  color: #dbcfb0; /* light tan */
 }
 
 nav a {
-  color: #0f172a;
+  color: #dbcfb0;
   text-decoration: none;
   margin-right: 1rem;
-  padding: 0.25rem 0.4rem;
-  border-radius: 6px;
+  font-weight: 600;
 }
 
 nav a:hover {
-  background: #dcfce7; /* pale green hover */
+  color: #bfc8ad;
+  text-decoration: underline;
 }
 
 main {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #bfc8ad; /* sage */
   border-radius: 12px;
   margin-top: 1rem;
+  padding: 1rem 1.25rem;
 }
 
 h2 {
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid #718f94;
   padding-bottom: 0.25rem;
 }
 
@@ -64,15 +79,76 @@ ol {
 }
 
 a {
-  color: #2563eb; /* link color different from personal site */
+  color: #545775;
+  font-weight: 600;
 }
 
 a:hover {
+  color: #718f94;
   text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #718f94;
 }
 
 footer {
   margin-top: 1rem;
-  color: #475569;
+  border-top: 2px solid #718f94;
+  color: #545775;
   font-size: 0.95rem;
+}
+
+/* Dark mode (auto, based on system setting) */
+/* I thought dark mode would be a fun challenge to implement */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #545775; /* deep slate */
+    color: #dbcfb0; /* light tan */
+  }
+
+  header {
+    background: #718f94;
+    border-bottom: 4px solid #bfc8ad;
+  }
+
+  h1 {
+    color: #dbcfb0;
+  }
+
+  nav a {
+    color: #dbcfb0;
+  }
+
+  nav a:hover {
+    color: #90b494;
+  }
+
+  main {
+    background: #718f94;
+  }
+
+  h2 {
+    border-bottom: 2px solid #bfc8ad;
+  }
+
+  a {
+    color: #dbcfb0;
+  }
+
+  a:hover {
+    color: #90b494;
+  }
+
+  img {
+    border: 2px solid #bfc8ad;
+  }
+
+  footer {
+    border-top: 2px solid #bfc8ad;
+    color: #dbcfb0;
+  }
 }
