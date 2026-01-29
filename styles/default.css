@@ -10,14 +10,30 @@ Palette:
 #C1B8C8 – soft lilac
 */
 
+/* Theme tokens (lets us avoid duplicate selectors) 
+Should fix the css issues with duplicates*/
+:root {
+  --page-bg: #2e2e3a;
+  --text: #f8f7ff;
+  --header-bg: #7a8b99;
+  --border: #91adc2;
+  --main-bg: #3a3a55;
+
+  --h2-color: #a9ddd6;
+  --h3-color: #c1b8c8;
+
+  --main-link: #a9ddd6;
+  --main-link-hover: #c1b8c8;
+}
+
 html {
   font-size: 100%;
 }
 
 body {
   margin: 0;
-  background: #2e2e3a; /* OG dark body background */
-  color: #f8f7ff;
+  background: var(--page-bg);
+  color: var(--text);
   font-family:
     "Inter",
     system-ui,
@@ -38,33 +54,34 @@ footer {
 }
 
 header {
-  background: #7a8b99;
-  border-bottom: 3px solid #91adc2;
+  background: var(--header-bg);
+  border-bottom: 3px solid var(--border);
 }
 
 h1 {
   font-family: "Playfair Display", Georgia, serif;
   letter-spacing: 0.5px;
   margin: 0 0 0.5rem 0;
-  color: #f8f7ff;
+  color: var(--text);
 }
 
+/* h2/h3 defined ONLY once */
 h2 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #a9ddd6;
+  color: var(--h2-color);
   font-weight: 600;
 }
 
 h3 {
   margin-top: 1rem;
   margin-bottom: 0.4rem;
-  color: #c1b8c8;
+  color: var(--h3-color);
   font-weight: 500;
 }
 
 nav a {
-  color: #f8f7ff;
+  color: var(--text);
   text-decoration: none;
   margin-right: 1rem;
   font-weight: 600;
@@ -76,21 +93,21 @@ nav a:hover {
 }
 
 main {
-  background: #3a3a55; /* OG dark main background */
+  background: var(--main-bg);
   border-radius: 12px;
   margin-top: 1rem;
-  color: #f8f7ff;
+  color: var(--text);
 }
 
-/* 🔹 Readable links on dark background 🔹 */
+/* ✅ readable links on dark main background */
 main a {
-  color: #a9ddd6; /* pale aqua for contrast */
+  color: var(--main-link);
   font-weight: 600;
   text-decoration: underline;
 }
 
 main a:hover {
-  color: #c1b8c8; /* soft lilac hover */
+  color: var(--main-link-hover);
 }
 
 figure {
@@ -101,59 +118,32 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 3px solid #91adc2;
+  border: 3px solid var(--border);
 }
 
 figcaption {
-  color: #f8f7ff;
+  color: var(--text);
   font-size: 0.95rem;
   margin-top: 0.5rem;
 }
 
 footer {
-  border-top: 3px solid #91adc2;
-  color: #f8f7ff;
+  border-top: 3px solid var(--border);
+  color: var(--text);
   font-size: 0.95rem;
   margin-top: 1rem;
 }
 
-/* Automatic Dark Mode (system preference) */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #1f1f29; /* slightly deeper dark */
-    color: #f8f7ff;
-  }
+/* Automatic Dark Mode: only changes variables (no duplicate heading selectors) */
+@media (color-scheme: dark) {
+  :root {
+    --page-bg: #1f1f29;
+    --main-bg: #2e2e3a;
 
-  header {
-    background: #7a8b99;
-  }
+    --h2-color: #c1b8c8;
+    --h3-color: #9ba0bc;
 
-  main {
-    background: #2e2e3a; /* darker main */
-    color: #f8f7ff;
-  }
-
-  h2 {
-    color: #c1b8c8;
-  }
-
-  h3 {
-    color: #9ba0bc;
-  }
-
-  main a {
-    color: #a9ddd6;
-  }
-
-  main a:hover {
-    color: #c1b8c8;
-  }
-
-  figcaption {
-    color: #f8f7ff;
-  }
-
-  footer {
-    color: #f8f7ff;
+    --main-link: #a9ddd6;
+    --main-link-hover: #c1b8c8;
   }
 }
