@@ -1,0 +1,78 @@
+/* Course Site: /itis3135/styles/default.css */
+
+body {
+  margin: 0;
+  background: #f8fafc; /* light background */
+  color: #0f172a; /* dark text */
+  font-family:
+    "Roboto",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Arial,
+    sans-serif;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 4px solid #22c55e; /* strong accent */
+}
+
+h1 {
+  font-family: "Space Grotesk", "Roboto", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 0.5rem 0;
+}
+
+nav a {
+  color: #0f172a;
+  text-decoration: none;
+  margin-right: 1rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #dcfce7; /* pale green hover */
+}
+
+main {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+h2 {
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.25rem;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+}
+
+a {
+  color: #2563eb; /* link color different from personal site */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 1rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
