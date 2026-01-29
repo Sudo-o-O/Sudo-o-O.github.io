@@ -10,15 +10,14 @@ Palette:
 #2E2C2F – charcoal
 */
 
-/* Light mode (default) */
 html {
   font-size: 100%;
 }
 
 body {
   margin: 0;
-  background: #f3e8ee; /* very light rose */
-  color: #2e2c2f; /* charcoal text */
+  background: #f3e8ee;
+  color: #2e2c2f;
   font-family:
     "Roboto",
     system-ui,
@@ -38,7 +37,7 @@ footer {
 }
 
 header {
-  background: #475b63; /* blue-gray */
+  background: #475b63;
   border-bottom: 4px solid #729b79;
 }
 
@@ -47,6 +46,11 @@ h1 {
   letter-spacing: 1px;
   margin: 0 0 0.5rem 0;
   color: #f3e8ee;
+}
+
+h2 {
+  border-bottom: 2px solid #729b79;
+  padding-bottom: 0.25rem;
 }
 
 nav a {
@@ -62,15 +66,10 @@ nav a:hover {
 }
 
 main {
-  background: #bacdb0; /* soft sage */
+  background: #bacdb0;
   border-radius: 12px;
   margin-top: 1rem;
   padding: 1rem 1.25rem;
-}
-
-h2 {
-  border-bottom: 2px solid #729b79;
-  padding-bottom: 0.25rem;
 }
 
 ul,
@@ -102,20 +101,16 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Dark mode (automatic via system setting) */
+/* Automatic dark mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background: #2e2c2f; /* charcoal */
+    background: #2e2c2f;
     color: #f3e8ee;
   }
 
   header {
     background: #475b63;
     border-bottom: 4px solid #bacdb0;
-  }
-
-  h1 {
-    color: #f3e8ee;
   }
 
   nav a {
