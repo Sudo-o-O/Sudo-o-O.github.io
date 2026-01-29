@@ -16,8 +16,8 @@ html {
 
 body {
   margin: 0;
-  background: #a9ddd6;
-  color: #2e2e3a;
+  background: #2e2e3a; /* OG dark body background */
+  color: #f8f7ff;
   font-family:
     "Inter",
     system-ui,
@@ -52,14 +52,14 @@ h1 {
 h2 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #7a8b99;
+  color: #a9ddd6;
   font-weight: 600;
 }
 
 h3 {
   margin-top: 1rem;
   margin-bottom: 0.4rem;
-  color: #9ba0bc;
+  color: #c1b8c8;
   font-weight: 500;
 }
 
@@ -76,10 +76,21 @@ nav a:hover {
 }
 
 main {
-  background: #f8f7ff;
+  background: #3a3a55; /* OG dark main background */
   border-radius: 12px;
   margin-top: 1rem;
-  color: #2e2e3a;
+  color: #f8f7ff;
+}
+
+/* 🔹 Readable links on dark background 🔹 */
+main a {
+  color: #a9ddd6; /* pale aqua for contrast */
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+main a:hover {
+  color: #c1b8c8; /* soft lilac hover */
 }
 
 figure {
@@ -94,22 +105,22 @@ img {
 }
 
 figcaption {
-  color: #2e2e3a;
+  color: #f8f7ff;
   font-size: 0.95rem;
   margin-top: 0.5rem;
 }
 
 footer {
   border-top: 3px solid #91adc2;
-  color: #2e2e3a;
+  color: #f8f7ff;
   font-size: 0.95rem;
   margin-top: 1rem;
 }
 
-/* Automatic dark mode */
+/* Automatic Dark Mode (system preference) */
 @media (prefers-color-scheme: dark) {
   body {
-    background: #2e2e3a;
+    background: #1f1f29; /* slightly deeper dark */
     color: #f8f7ff;
   }
 
@@ -118,7 +129,7 @@ footer {
   }
 
   main {
-    background: #3a3a55;
+    background: #2e2e3a; /* darker main */
     color: #f8f7ff;
   }
 
@@ -128,6 +139,14 @@ footer {
 
   h3 {
     color: #9ba0bc;
+  }
+
+  main a {
+    color: #a9ddd6;
+  }
+
+  main a:hover {
+    color: #c1b8c8;
   }
 
   figcaption {
