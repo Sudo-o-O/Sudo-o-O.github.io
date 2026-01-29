@@ -1,24 +1,24 @@
 /*
 Color palette sourced from Coolors:
-https://coolors.co/dbcfb0-bfc8ad-90b494-718f94-545775
+https://coolors.co/f3e8ee-bacdb0-729b79-475b63-2e2c2f
 
 Palette:
-#DBCFB0 – light tan
-#BFC8AD – sage
-#90B494 – soft green
-#718F94 – blue-gray
-#545775 – deep slate
+#F3E8EE – very light rose
+#BACDB0 – soft sage
+#729B79 – muted green
+#475B63 – blue-gray
+#2E2C2F – charcoal
 */
 
-/* Light mode defaults */
+/* Light mode (default) */
 html {
   font-size: 100%;
 }
 
 body {
   margin: 0;
-  background: #dbcfb0; /* light tan */
-  color: #545775; /* deep slate */
+  background: #f3e8ee; /* very light rose */
+  color: #2e2c2f; /* charcoal text */
   font-family:
     "Roboto",
     system-ui,
@@ -38,38 +38,38 @@ footer {
 }
 
 header {
-  background: #718f94; /* blue-gray */
-  border-bottom: 4px solid #90b494; /* soft green */
+  background: #475b63; /* blue-gray */
+  border-bottom: 4px solid #729b79;
 }
 
 h1 {
   font-family: "Space Grotesk", "Roboto", Arial, sans-serif;
   letter-spacing: 1px;
   margin: 0 0 0.5rem 0;
-  color: #dbcfb0; /* light tan */
+  color: #f3e8ee;
 }
 
 nav a {
-  color: #dbcfb0;
+  color: #f3e8ee;
   text-decoration: none;
   margin-right: 1rem;
   font-weight: 600;
 }
 
 nav a:hover {
-  color: #bfc8ad;
+  color: #bacdb0;
   text-decoration: underline;
 }
 
 main {
-  background: #bfc8ad; /* sage */
+  background: #bacdb0; /* soft sage */
   border-radius: 12px;
   margin-top: 1rem;
   padding: 1rem 1.25rem;
 }
 
 h2 {
-  border-bottom: 2px solid #718f94;
+  border-bottom: 2px solid #729b79;
   padding-bottom: 0.25rem;
 }
 
@@ -79,12 +79,12 @@ ol {
 }
 
 a {
-  color: #545775;
+  color: #475b63;
   font-weight: 600;
 }
 
 a:hover {
-  color: #718f94;
+  color: #729b79;
   text-decoration: underline;
 }
 
@@ -92,63 +92,63 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 2px solid #718f94;
+  border: 2px solid #729b79;
 }
 
 footer {
   margin-top: 1rem;
-  border-top: 2px solid #718f94;
-  color: #545775;
+  border-top: 2px solid #729b79;
+  color: #2e2c2f;
   font-size: 0.95rem;
 }
 
-/* Dark mode (auto, based on system setting) */
-/* I thought dark mode would be a fun challenge to implement */
+/* Dark mode (automatic via system setting) */
 @media (prefers-color-scheme: dark) {
   body {
-    background: #545775; /* deep slate */
-    color: #dbcfb0; /* light tan */
+    background: #2e2c2f; /* charcoal */
+    color: #f3e8ee;
   }
 
   header {
-    background: #718f94;
-    border-bottom: 4px solid #bfc8ad;
+    background: #475b63;
+    border-bottom: 4px solid #bacdb0;
   }
 
   h1 {
-    color: #dbcfb0;
+    color: #f3e8ee;
   }
 
   nav a {
-    color: #dbcfb0;
+    color: #f3e8ee;
   }
 
   nav a:hover {
-    color: #90b494;
+    color: #bacdb0;
   }
 
   main {
-    background: #718f94;
+    background: #475b63;
+    color: #f3e8ee;
   }
 
   h2 {
-    border-bottom: 2px solid #bfc8ad;
+    border-bottom: 2px solid #bacdb0;
   }
 
   a {
-    color: #dbcfb0;
+    color: #f3e8ee;
   }
 
   a:hover {
-    color: #90b494;
+    color: #bacdb0;
   }
 
   img {
-    border: 2px solid #bfc8ad;
+    border: 2px solid #bacdb0;
   }
 
   footer {
-    border-top: 2px solid #bfc8ad;
-    color: #dbcfb0;
+    border-top: 2px solid #bacdb0;
+    color: #f3e8ee;
   }
 }
