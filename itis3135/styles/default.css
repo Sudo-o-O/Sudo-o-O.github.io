@@ -139,6 +139,10 @@ nav .sep {
   margin: 0 0.5rem;
   padding: 0;
 }
+.tagline {
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+}
 
 /* Automatic dark mode: change variables only */
 @media (color-scheme: dark) {
