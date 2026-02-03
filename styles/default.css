@@ -137,6 +137,70 @@ nav .sep {
   margin: 0 0.5rem;
   padding: 0;
 }
+/* Introduction profile centering */
+.intro-profile {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.intro-profile figure {
+  margin: 0;
+}
+
+.intro-profile img {
+  display: block;
+  margin: 0 auto;
+}
+
+.intro-profile figcaption {
+  margin-top: 0.5rem;
+}
+/* Footer (horizontal links with separators) */
+footer nav[aria-label="Footer links"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem; /* small spacing so bars don't look huge */
+  margin-bottom: 0.75rem;
+}
+
+footer nav[aria-label="Footer links"] a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer nav[aria-label="Footer links"] a:hover {
+  color: var(--main-link-hover);
+  text-decoration: underline;
+}
+
+/* separator spacing */
+footer nav[aria-label="Footer links"] .sep {
+  margin: 0 0.35rem;
+  font-weight: 600;
+}
+
+/* center the validator line */
+footer p {
+  text-align: center;
+  margin: 0;
+}
+
+footer p a {
+  color: var(--main-link);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+footer p a:hover {
+  color: var(--main-link-hover);
+}
+nav .sep {
+  margin: 0 0.5rem;
+  padding: 0;
+}
 
 /* Automatic Dark Mode: only changes variables (no duplicate heading selectors) */
 @media (color-scheme: dark) {
