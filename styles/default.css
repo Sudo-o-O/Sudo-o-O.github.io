@@ -83,7 +83,7 @@ h3 {
 nav a {
   color: var(--text);
   text-decoration: none;
-  margin-right: 1rem;
+  margin-right: 0;
   font-weight: 600;
 }
 
@@ -132,6 +132,10 @@ footer {
   color: var(--text);
   font-size: 0.95rem;
   margin-top: 1rem;
+}
+nav .sep {
+  margin: 0 0.5rem;
+  padding: 0;
 }
 
 /* Automatic Dark Mode: only changes variables (no duplicate heading selectors) */
