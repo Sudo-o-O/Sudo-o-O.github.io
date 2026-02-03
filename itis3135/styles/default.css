@@ -75,7 +75,7 @@ h1 {
 nav a {
   color: var(--nav-link);
   text-decoration: none;
-  margin-right: 1rem;
+  margin-right: 0;
   font-weight: 600;
 }
 
@@ -134,6 +134,10 @@ footer a {
 
 footer a:hover {
   color: var(--link-hover); /* hover contrast */
+}
+nav .sep {
+  margin: 0 0.5rem;
+  padding: 0;
 }
 
 /* Automatic dark mode: change variables only */
