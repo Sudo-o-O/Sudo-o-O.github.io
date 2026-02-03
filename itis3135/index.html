@@ -21,21 +21,7 @@
     <link rel="stylesheet" href="styles/default.css" />
   </head>
   <body>
-    <header>
-      <h1>Matthew R. Gibbs's Glorious Misfit ~ ITIS 3135</h1>
-
-      <nav aria-label="Course navigation">
-        <a href="../index.html">Home</a>
-        <span> | </span>
-        <a href="../introduction.html">Introduction</a>
-        <span> | </span>
-        <a href="contract.html">Contract</a>
-        <span> | </span>
-        <a href="website_evaluations.html">Website Evaluations</a>
-        <span> | </span>
-        <a href="fcc/index.html">FCC RWD</a>
-      </nav>
-    </header>
+    <div data-include="components/header.html"></div>
 
     <main>
       <h2>Course Home</h2>
@@ -52,7 +38,7 @@
       </p>
     </main>
 
-    <footer>
+    <!-- <footer>
       <nav aria-label="Footer links">
         <a href="./">ITIS3135</a>
         <span> | </span>
@@ -70,6 +56,10 @@
       <p>
         <a href="https://validator.w3.org/check?uri=referer">Validate HTML</a>
       </p>
-    </footer>
+    </footer> -->
+    <!-- FOOTER INCLUDE -->
+    <div data-include="components/footer.html"></div>
+    <!-- htmlinclude script -->
+    <script src="scripts/htmlinclude.js"></script>
   </body>
 </html>
