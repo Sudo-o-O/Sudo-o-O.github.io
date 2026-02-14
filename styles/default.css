@@ -70,10 +70,12 @@ header nav a,
 header .sep {
   color: var(--header-text);
 }
+header .sep { font-weight: 600; }
 
 /* Hover color */
 header nav a:hover {
   color: #7a8b99; /* cool slate*/
+  text-decoration: underline;
 }
 
 h1 {
