@@ -73,8 +73,10 @@ header .sep {
 header .sep { font-weight: 600; }
 
 /* Hover color */
-header nav a:hover {
-  color: #7a8b99; /* cool slate*/
+header nav a:hover,
+header nav a:focus,
+header nav a:visited {
+  color: var(--header-text); /* keep dark */
   text-decoration: underline;
 }
 
