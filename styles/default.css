@@ -18,7 +18,8 @@ Should fix the css issues with duplicates*/
   /* --header-bg: #7a8b99;
   --header-text: #a9ddd6; pale aqua */
   --header-bg: #a9ddd6;     /* pale aqua background */
-  --header-text: #2e2e3a;   /* dark text */
+  /* --header-text: #2e2e3a;   dark text */
+  --header-text: #000000; /* pure black text */
   --border: #91adc2;
   --main-bg: #3a3a55;
 
