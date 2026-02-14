@@ -63,6 +63,23 @@ footer {
 header {
   background: var(--header-bg);
   border-bottom: 4px solid var(--accent);
+  color: var(--nav-link); /* ADD: makes header text default to light */
+}
+header nav a:link,
+header nav a:visited,
+header nav a:active {
+  color: var(--nav-link);
+}
+
+/* Make sure tagline + separators are readable on the header */
+header .tagline,
+header .sep {
+  color: var(--nav-link);
+}
+header nav a:hover,
+header nav a:focus {
+  color: var(--nav-link);   /* keep high contrast */
+  text-decoration: underline;
 }
 
 h1 {
