@@ -15,11 +15,8 @@ Should fix the css issues with duplicates*/
 :root {
   --page-bg: #2e2e3a;
   --text: #f8f7ff;
-  /* --header-bg: #7a8b99;
-  --header-text: #a9ddd6; pale aqua */
-  --header-bg: #a9ddd6;     /* pale aqua background */
-  /* --header-text: #2e2e3a;   dark text */
-  --header-text: #000000; /* pure black text */
+  --header-bg: #7a8b99;     /* cool slate */
+  --header-text: #a9ddd6;   /* pale aqua */
   --border: #91adc2;
   --main-bg: #3a3a55;
 
@@ -64,20 +61,17 @@ header {
   color: var(--header-text);
 }
 
-/* Header text + nav inherit readable color */
+/* Header text + nav */
 header h1,
 header .tagline,
 header nav a,
 header .sep {
   color: var(--header-text);
 }
-header .sep { font-weight: 600; }
 
-/* Hover color */
-header nav a:hover,
-header nav a:focus,
-header nav a:visited {
-  color: var(--header-text); /* keep dark */
+/* Hover */
+header nav a:hover {
+  color: #c1b8c8;  /* soft lilac */
   text-decoration: underline;
 }
 
