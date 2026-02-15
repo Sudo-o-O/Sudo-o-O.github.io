@@ -62,7 +62,6 @@ header {
 }
 
 /* Lock ALL header text + link states */
-header h1,
 header .tagline,
 header .sep,
 header nav a,
