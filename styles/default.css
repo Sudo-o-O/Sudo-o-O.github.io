@@ -10,8 +10,8 @@ https://coolors.co/a9ddd6-7a8b99-91adc2-9ba0bc-c1b8c8
   --page-bg: #2e2e3a;
   --text: #f8f7ff;
 
-  --header-bg: #7a8b99;     /* cool slate */
-  --header-text: #a9ddd6;   /* pale aqua */
+  --header-bg: #2c3a43;  /* slightly darker */
+  --header-text: #a9ddd6;
 
   --border: #91adc2;
   --main-bg: #3a3a55;
@@ -119,6 +119,32 @@ main a:hover,
 main a:focus {
   color: var(--main-link);
   text-decoration: underline;
+}
+/* =========================
+   INTRO PROFILE ALIGNMENT
+========================= */
+.intro-profile {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.intro-profile h3 {
+  margin-bottom: 1rem;
+}
+
+.intro-profile figure {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.intro-profile img {
+  display: block;
+  margin: 0 auto;
+}
+
+.intro-profile figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
 }
 
 /* =========================
