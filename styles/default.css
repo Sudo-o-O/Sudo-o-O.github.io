@@ -197,6 +197,18 @@ footer nav a {
 footer nav a:hover {
   text-decoration: underline;
 }
+/* Make ALL footer links high contrast */
+footer a,
+footer a:visited {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--main-link); /* optional accent on hover */
+}
 
 /* =========================
    DARK MODE
