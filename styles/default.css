@@ -1,22 +1,18 @@
 /*
 Color palette sourced from Coolors:
 https://coolors.co/a9ddd6-7a8b99-91adc2-9ba0bc-c1b8c8
-
-Palette:
-#A9DDD6 – pale aqua
-#7A8B99 – cool slate
-#91ADC2 – muted blue
-#9BA0BC – lavender gray
-#C1B8C8 – soft lilac
 */
-
-/* Theme tokens (lets us avoid duplicate selectors) 
-Should fix the css issues with duplicates*/
+/* Used ai to organise the page */
+/* =========================
+   ROOT VARIABLES
+========================= */
 :root {
   --page-bg: #2e2e3a;
   --text: #f8f7ff;
+
   --header-bg: #7a8b99;     /* cool slate */
   --header-text: #a9ddd6;   /* pale aqua */
+
   --border: #91adc2;
   --main-bg: #3a3a55;
 
@@ -27,6 +23,10 @@ Should fix the css issues with duplicates*/
   --main-link-hover: #c1b8c8;
 }
 
+/* =========================
+   BASE
+========================= */
+
 html {
   font-size: 100%;
 }
@@ -35,14 +35,7 @@ body {
   margin: 0;
   background: var(--page-bg);
   color: var(--text);
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Arial,
-    sans-serif;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.6;
 }
 
@@ -54,34 +47,41 @@ footer {
   padding: 1rem 1.25rem;
 }
 
-/* Header container */
+/* =========================
+   HEADER (Contrast Safe)
+========================= */
+
 header {
   background: var(--header-bg);
   border-bottom: 3px solid var(--border);
   color: var(--header-text);
 }
 
-/* Header text + nav */
-header .tagline,
+/* Force all header text + nav to high-contrast */
 header nav a,
-header .sep {
+header nav span {
   color: var(--header-text);
 }
 
-/* Hover */
-header nav a:hover {
-  color: #c1b8c8;  /* soft lilac */
+/* Hover/focus/visited: keep same color, just underline */
+header nav a:hover,
+header nav a:focus,
+header nav a:visited {
+  color: var(--header-text);
   text-decoration: underline;
 }
+
+/* =========================
+   HEADINGS
+========================= */
 
 h1 {
   font-family: "Playfair Display", Georgia, serif;
   letter-spacing: 0.5px;
   margin: 0 0 0.5rem 0;
-  color: inherit;   /* CHANGE THIS */
+  color: inherit;  /* inherit header color */
 }
 
-/* h2/h3 defined ONLY once */
 h2 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
@@ -96,17 +96,9 @@ h3 {
   font-weight: 500;
 }
 
-nav a {
-  color: var(--text);
-  text-decoration: none;
-  margin-right: 0;
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: #c1b8c8;
-  text-decoration: underline;
-}
+/* =========================
+   MAIN CONTENT
+========================= */
 
 main {
   background: var(--main-bg);
@@ -115,16 +107,23 @@ main {
   color: var(--text);
 }
 
-/* ✅ readable links on dark main background */
-main a {
+/* Accessible main links */
+main a,
+main a:visited {
   color: var(--main-link);
   font-weight: 600;
   text-decoration: underline;
 }
 
-main a:hover {
-  color: var(--main-link-hover);
+main a:hover,
+main a:focus {
+  color: var(--main-link);
+  text-decoration: underline;
 }
+
+/* =========================
+   IMAGES
+========================= */
 
 figure {
   margin: 1rem 0;
@@ -143,84 +142,47 @@ figcaption {
   margin-top: 0.5rem;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer {
   border-top: 3px solid var(--border);
   color: var(--text);
   font-size: 0.95rem;
   margin-top: 1rem;
 }
-nav .sep {
-  margin: 0 0.5rem;
-  padding: 0;
-}
-/* Introduction profile centering */
-.intro-profile {
-  text-align: center;
-  margin: 1.5rem 0;
-}
 
-.intro-profile figure {
-  margin: 0;
-}
-
-.intro-profile img {
-  display: block;
-  margin: 0 auto;
-}
-
-.intro-profile figcaption {
-  margin-top: 0.5rem;
-}
-/* Footer (horizontal links with separators) */
 footer nav[aria-label="Footer links"] {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.35rem; /* small spacing so bars don't look huge */
+  gap: 0.35rem;
   margin-bottom: 0.75rem;
 }
 
-footer nav[aria-label="Footer links"] a {
+footer nav a {
   color: var(--text);
   font-weight: 600;
   text-decoration: none;
 }
 
-footer nav[aria-label="Footer links"] a:hover {
-  color: var(--main-link-hover);
+footer nav a:hover {
   text-decoration: underline;
 }
 
-/* separator spacing */
-footer nav[aria-label="Footer links"] .sep {
-  margin: 0 0.35rem;
-  font-weight: 600;
-}
+/* =========================
+   DARK MODE
+========================= */
 
-/* center the validator line */
-footer p {
-  text-align: center;
-  margin: 0;
-}
-
-footer p a {
-  color: var(--main-link);
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-footer p a:hover {
-  color: var(--main-link-hover);
-}
-
-/* Automatic Dark Mode: only changes variables (no duplicate heading selectors) */
 @media (color-scheme: dark) {
   :root {
     --page-bg: #1f1f29;
     --main-bg: #2e2e3a;
-    --header-bg: #1f1f29;     /* dark-mode bg */
-    --header-text: #a9ddd6;   /* pale aqua text */
+    --header-bg: #1f1f29;
+    --header-text: #a9ddd6;
+
     --h2-color: #c1b8c8;
     --h3-color: #9ba0bc;
 
