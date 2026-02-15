@@ -17,7 +17,8 @@ https://coolors.co/f3e8ee-bacdb0-729b79-475b63-2e2c2f
 
   --main-bg: #bacdb0;
 
-  --nav-link: #f3e8ee;
+  --header-text: #f3e8ee;         /* NEW: header text color */
+  --nav-link: var(--header-text);
 
   --h2-border: #729b79;
 
@@ -82,9 +83,8 @@ h1 {
   font-family: "Space Grotesk", "Roboto", Arial, sans-serif;
   letter-spacing: 1px;
   margin: 0 0 0.5rem 0;
-  color: var(--nav-link);
+  color: inherit;
 }
-
 .tagline {
   margin: 0.25rem 0 0.75rem;
   font-style: italic;
