@@ -100,6 +100,26 @@ nav .sep {
   margin: 0 0.5rem;
   padding: 0;
 }
+/* =========================
+   HEADER NAV FIX
+========================= */
+
+header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+header nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header .sep {
+  margin: 0;
+  opacity: 0.8;
+}
 
 /* =========================
    MAIN CONTENT
