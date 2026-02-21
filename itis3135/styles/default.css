@@ -120,7 +120,16 @@ header .sep {
   margin: 0;
   opacity: 0.8;
 }
+.secondary-nav {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
 
+.secondary-nav a {
+  color: var(--nav-link);
+  text-decoration: underline;
+}
 /* =========================
    MAIN CONTENT
 ========================= */
