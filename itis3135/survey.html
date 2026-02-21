@@ -5,17 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey | ITIS 3135</title>
     <link rel="stylesheet" href="styles/default.css" />
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <div data-include="components/header.html"></div>
 
     <main>
-      <h2>Survey Form Project (content will be built here)</h2>
+      <h2>Glorious Misfit Guild Intake Form</h2>
+
       <p>
-        This page will contain my freeCodeCamp Survey Form certification
-        project.
+        Welcome to the Glorious Misfit Guild. Use this form to join the crew or
+        request help with a project. We specialize in clean layouts, accessible
+        design, and fixing strange bugs without judgment.
       </p>
+
+      <form id="survey-form" action="#" method="post">
+        <!-- Basic Info -->
+        <fieldset>
+          <legend>Basic Information</legend>
+
+          <label id="name-label" for="name">Name:</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label id="email-label" for="email">Email:</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label id="number-label" for="number">
+            How many projects have you shipped?
+          </label>
+          <input
+            id="number"
+            name="projects"
+            type="number"
+            min="0"
+            max="999"
+            placeholder="0"
+          />
+        </fieldset>
+
+        <!-- Request Details -->
+        <fieldset>
+          <legend>Request Details</legend>
+
+          <label for="dropdown">What do you need help with?</label>
+          <select id="dropdown" name="request">
+            <option value="">Select one</option>
+            <option value="ui">UI / Layout cleanup</option>
+            <option value="css">CSS Styling & Theme</option>
+            <option value="a11y">Accessibility / WCAG fixes</option>
+            <option value="debug">Debugging + Validation</option>
+          </select>
+
+          <p>Pick your role (if joining):</p>
+          <label>
+            <input type="radio" name="role" value="builder" />
+            Builder
+          </label>
+
+          <label>
+            <input type="radio" name="role" value="designer" />
+            Designer
+          </label>
+
+          <label>
+            <input type="radio" name="role" value="tester" />
+            Tester
+          </label>
+        </fieldset>
+
+        <!-- Misfit Preferences -->
+        <fieldset>
+          <legend>Misfit Preferences</legend>
+
+          <p>Check anything that fits you:</p>
+
+          <label>
+            <input type="checkbox" name="traits" value="night-owl" />
+            Night owl
+          </label>
+
+          <label>
+            <input type="checkbox" name="traits" value="detail" />
+            Detail obsessed
+          </label>
+
+          <label>
+            <input type="checkbox" name="traits" value="chaos" />
+            Organized chaos
+          </label>
+
+          <label for="comments">Describe your project or issue:</label>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="4"
+            placeholder="What are you building? What's broken?"
+          ></textarea>
+        </fieldset>
+
+        <button id="submit" type="submit">Submit to the Guild</button>
+      </form>
     </main>
 
     <div data-include="components/footer.html"></div>
