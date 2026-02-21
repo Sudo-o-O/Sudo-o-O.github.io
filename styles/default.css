@@ -2,7 +2,7 @@
 Color palette sourced from Coolors:
 https://coolors.co/a9ddd6-7a8b99-91adc2-9ba0bc-c1b8c8
 */
-/* Used ai to organise the page */
+/* Used AI to organize the file after edits */
 /* =========================
    ROOT VARIABLES
 ========================= */
@@ -10,7 +10,7 @@ https://coolors.co/a9ddd6-7a8b99-91adc2-9ba0bc-c1b8c8
   --page-bg: #2e2e3a;
   --text: #f8f7ff;
 
-  --header-bg: #2c3a43;  /* slightly darker */
+  --header-bg: #2c3a43; /* slightly darker */
   --header-text: #a9ddd6;
 
   --border: #91adc2;
@@ -35,7 +35,14 @@ body {
   margin: 0;
   background: var(--page-bg);
   color: var(--text);
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
   line-height: 1.6;
 }
 
@@ -79,7 +86,7 @@ h1 {
   font-family: "Playfair Display", Georgia, serif;
   letter-spacing: 0.5px;
   margin: 0 0 0.5rem 0;
-  color: inherit;  /* inherit header color */
+  color: inherit; /* inherit header color */
 }
 
 h2 {
