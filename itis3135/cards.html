@@ -12,36 +12,87 @@
   </head>
 
   <body>
-    <!-- <header>
-      <h1>ITIS 3135 | Glorious Misfit</h1>
-
-      <nav aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="contract.html">Contract</a>
-        <a href="survey.html">Survey</a>
-        <a href="cards.html">Cards</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="documentation.html">Documentation</a>
-        <a href="product.html">Product</a>
-      </nav>
-
-      <nav class="secondary-nav" aria-label="Secondary navigation">
-        <a href="stuff/cRap%20pAge-.htm">Crappy Page</a>
-      </nav>
-    </header> -->
     <div data-include="components/header.html"></div>
-    <main>
-      <h2>Build a Page of Playing Cards</h2>
+
+    <main id="playing-cards">
+      <h2>Glorious Misfits Card Gallery</h2>
       <p>
-        This page will contain my “playing cards” project, re-imagined as
-        collectible Multiverse Market cards.
+        These are collectible “Glorious Misfits” cards inspired by trading card
+        games. Each one represents a different kind of creative chaos.
       </p>
+
+      <section class="card-grid" aria-label="Glorious Misfits cards">
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="left">
+            <span class="card-name">Night Builder</span>
+            <span class="card-type">Creature — Misfit Engineer</span>
+          </div>
+
+          <div class="middle">
+            <img
+              src="images/night_builder.png"
+              alt="Fantasy trading card art for Night Builder, a cyberpunk raccoon coder working at night."
+            />
+            <p class="rules">
+              Haste. When Night Builder enters, you may draw a card, then
+              discard a card.
+            </p>
+          </div>
+
+          <div class="right">
+            <span class="mana">⚡ 1U</span>
+            <span class="pt">2/1</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="left">
+            <span class="card-name">Patch Artist</span>
+            <span class="card-type">Creature — Misfit Guardian</span>
+          </div>
+
+          <div class="middle">
+            <img
+              src="images/patch_artist.png"
+              alt="Fantasy trading card art for Patch Artist, a raccoon engineer repairing and stitching digital systems."
+            />
+            <p class="rules">Vigilance. Other Misfits you control get +0/+1.</p>
+          </div>
+
+          <div class="right">
+            <span class="mana">🛡️ 2W</span>
+            <span class="pt">2/3</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="left">
+            <span class="card-name">Rouge Designer</span>
+            <span class="card-type">Creature — Misfit Artist</span>
+          </div>
+
+          <div class="middle">
+            <img
+              src="images/rouge_designer.png"
+              alt="Fantasy trading card art for Rouge Design, a raccoon artist disrupting boring branding with bold color."
+            />
+            <p class="rules">
+              Disrupt boring branding with a coat of misfit colors.
+            </p>
+          </div>
+
+          <div class="right">
+            <span class="mana">🎨 1G</span>
+            <span class="pt">2/2</span>
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- 
-    <footer>
-      <p><strong>Glorious Misfit</strong> | ITIS 3135</p>
-    </footer> -->
+
     <div data-include="components/footer.html"></div>
-<script src="scripts/htmlinclude.js"></script>
+    <script src="scripts/htmlinclude.js"></script>
   </body>
 </html>
