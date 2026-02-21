@@ -12,36 +12,115 @@
   </head>
 
   <body>
-    <!-- <header>
-      <h1>ITIS 3135 | Glorious Misfit</h1>
-
-      <nav aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="contract.html">Contract</a>
-        <a href="survey.html">Survey</a>
-        <a href="cards.html">Cards</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="documentation.html">Documentation</a>
-        <a href="product.html">Product</a>
-      </nav>
-
-      <nav class="secondary-nav" aria-label="Secondary navigation">
-        <a href="stuff/cRap%20pAge-.htm">Crappy Page</a>
-      </nav>
-    </header> -->
     <div data-include="components/header.html"></div>
+
     <main>
-      <h2>Build a Technical Documentation Page</h2>
+      <h2>Glorious Misfit Handbook</h2>
+
       <p>
-        This page will contain documentation for using the Multiverse Market
-        Inventory Terminal.
+        This handbook explains how the Glorious Misfit Guild builds pages that
+        stay consistent, validate cleanly, and pass basic accessibility checks.
+        It’s the “rules of the road” for shipping work without chaos taking
+        over.
       </p>
+
+      <div class="doc-layout">
+        <nav class="doc-nav" aria-label="Documentation navigation">
+          <h3>Handbook Sections</h3>
+          <ul>
+            <li><a href="#guild_rules">Guild Rules</a></li>
+            <li><a href="#page_structure">Page Structure</a></li>
+            <li><a href="#includes">Header/Footer Includes</a></li>
+            <li><a href="#navigation">Navigation Setup</a></li>
+            <li><a href="#accessibility">Accessibility Basics</a></li>
+            <li><a href="#validation">Validation Checklist</a></li>
+          </ul>
+        </nav>
+
+        <section class="doc-content" aria-label="Documentation content">
+          <section id="guild_rules">
+            <h3>Guild Rules</h3>
+            <ul>
+              <li>Use semantic HTML: header, main, footer.</li>
+              <li>One H1 per page. H2 is the page title inside main.</li>
+              <li>Keep headers/footers consistent using includes.</li>
+              <li>Fix contrast and labels before turning work in.</li>
+            </ul>
+          </section>
+
+          <section id="page_structure">
+            <h3>Page Structure</h3>
+            <p>Every ITIS page should follow this basic structure:</p>
+            <pre><code>&lt;div data-include="components/header.html"&gt;&lt;/div&gt;
+&lt;main&gt;
+  &lt;h2&gt;Page Title&lt;/h2&gt;
+  &lt;!-- page content --&gt;
+&lt;/main&gt;
+&lt;div data-include="components/footer.html"&gt;&lt;/div&gt;
+&lt;script src="scripts/htmlinclude.js"&gt;&lt;/script&gt;</code></pre>
+          </section>
+
+          <section id="includes">
+            <h3>Header/Footer Includes</h3>
+            <p>
+              Using shared components prevents you from fixing the same bug on
+              five pages. Update the header once and every page inherits the
+              change.
+            </p>
+            <ul>
+              <li>Header lives in <code>components/header.html</code></li>
+              <li>Footer lives in <code>components/footer.html</code></li>
+              <li>
+                Use <code>htmlinclude.js</code> to inject them into each page
+              </li>
+            </ul>
+          </section>
+
+          <section id="navigation">
+            <h3>Navigation Setup</h3>
+            <p>You need two navbars:</p>
+            <ul>
+              <li>
+                <strong>Primary nav:</strong> themed pages (Home, Contract,
+                Survey, Cards, Inventory, Documentation, Product)
+              </li>
+              <li>
+                <strong>Secondary nav:</strong> “off-theme” pages (like the
+                Crappy Page)
+              </li>
+            </ul>
+            <p>
+              This keeps the main theme consistent while still linking required
+              oddball assignments.
+            </p>
+          </section>
+
+          <section id="accessibility">
+            <h3>Accessibility Basics</h3>
+            <ul>
+              <li>All links must be readable (visited + hover included).</li>
+              <li>Form inputs must have labels.</li>
+              <li>
+                Alt text must be descriptive and not repeated word-for-word.
+              </li>
+              <li>Headings should be in order (h1 → h2 → h3).</li>
+            </ul>
+          </section>
+
+          <section id="validation">
+            <h3>Validation Checklist</h3>
+            <ul>
+              <li>HTML passes Accumulus.</li>
+              <li>CSS passes (no duplicate heading definitions).</li>
+              <li>No contrast errors in header/footer/nav/links.</li>
+              <li>All internal links work on GitHub Pages + UNCC webspace.</li>
+            </ul>
+          </section>
+        </section>
+      </div>
     </main>
 
-    <!-- <footer>
-      <p><strong>Glorious Misfit</strong> | ITIS 3135</p>
-    </footer> -->
     <div data-include="components/footer.html"></div>
-<script src="scripts/htmlinclude.js"></script>
+    <script src="scripts/htmlinclude.js"></script>
   </body>
 </html>
