@@ -39,6 +39,11 @@ https://coolors.co/f3e8ee-bacdb0-729b79-475b63-2e2c2f
 html {
   font-size: 100%;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
