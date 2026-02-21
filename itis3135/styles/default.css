@@ -17,7 +17,7 @@ https://coolors.co/f3e8ee-bacdb0-729b79-475b63-2e2c2f
 
   --main-bg: #bacdb0;
 
-  --header-text: #f3e8ee;         /* NEW: header text color */
+  --header-text: #f3e8ee; /* NEW: header text color */
   --nav-link: var(--header-text);
 
   --h2-border: #729b79;
@@ -40,7 +40,13 @@ body {
   margin: 0;
   background: var(--page-bg);
   color: var(--text);
-  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  font-family:
+    "Roboto",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Arial,
+    sans-serif;
   line-height: 1.6;
 }
 
@@ -165,7 +171,312 @@ footer a:focus {
   font-weight: 600;
   text-decoration: underline;
 }
+/* =========================
+   CARDS PAGE (FCC style)
+========================= */
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 3px solid var(--border);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.card .left,
+.card .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.card-name {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.card-type {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.card .middle img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  border: 3px solid var(--border);
+}
+
+.rules {
+  margin: 0.6rem 0 0;
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.mana {
+  font-weight: 700;
+}
+
+.pt {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+/* =========================
+   SURVEY FORM
+========================= */
+form {
+  margin-top: 1rem;
+}
+
+fieldset {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+  color: var(--h2-color);
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.4rem;
+}
+
+button[type="submit"] {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 12px;
+  background: var(--h2-color);
+  color: #000;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  filter: brightness(1.05);
+  outline: 2px solid var(--border);
+  outline-offset: 2px;
+}
+/* =========================
+   TABLES (Inventory)
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden; /* keeps rounded corners */
+  background: rgba(0, 0, 0, 0.15);
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--h2-color);
+}
+
+thead th {
+  text-align: left;
+  padding: 0.75rem;
+  background: rgba(145, 173, 194, 0.25); /* var(--border) tint */
+  color: var(--text);
+  border-bottom: 2px solid var(--border);
+}
+
+tbody td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(145, 173, 194, 0.35);
+  color: var(--text);
+}
+
+/* zebra striping */
+tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* row hover (keyboard/mouse friendly) */
+tbody tr:hover {
+  background: rgba(169, 221, 214, 0.12); /* var(--h2-color) tint */
+}
+
+/* make long notes wrap nicely */
+td {
+  vertical-align: top;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+/* =========================
+   DOCUMENTATION LAYOUT
+========================= */
+
+.doc-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.doc-nav {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.15);
+  height: fit-content;
+}
+
+.doc-nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+}
+
+.doc-nav li {
+  margin: 0.35rem 0;
+}
+
+.doc-nav a {
+  color: var(--main-link);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.doc-nav a:hover,
+.doc-nav a:focus {
+  color: var(--main-link-hover);
+}
+
+.doc-content section {
+  margin-bottom: 1.5rem;
+}
+
+pre {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text);
+}
+
+code {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+/* responsive: stack nav above content */
+@media (max-width: 750px) {
+  .doc-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   PRODUCT PAGE
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 1.5rem;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  margin-top: 1rem;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 14px;
+  background: var(--h2-color);
+  color: #000;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  filter: brightness(1.05);
+  outline: 2px solid var(--border);
+  outline-offset: 2px;
+}
+
+.pricing {
+  margin-top: 2rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.price-card {
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.price-card h4 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+}
+
+.price-card ul {
+  padding-left: 1.2rem;
+}
+
+.featured {
+  border: 3px solid var(--h2-color);
+  background: rgba(169, 221, 214, 0.1);
+}
 /* =========================
    DARK MODE
 ========================= */
