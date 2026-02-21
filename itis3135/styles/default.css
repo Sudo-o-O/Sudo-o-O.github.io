@@ -17,11 +17,15 @@ https://coolors.co/f3e8ee-bacdb0-729b79-475b63-2e2c2f
 
   --main-bg: #bacdb0;
 
-  --header-text: #f3e8ee; /* NEW: header text color */
+  --header-text: #f3e8ee;
   --nav-link: var(--header-text);
 
-  --h2-border: #729b79;
+  --border: #729b79;
+  --h2-color: #475b63;
+  --main-link: #2e2c2f;
+  --main-link-hover: #475b63;
 
+  --h2-border: #729b79;
   --img-border: #729b79;
 
   --footer-text: #2e2c2f;
