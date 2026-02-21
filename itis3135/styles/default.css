@@ -131,6 +131,31 @@ header .sep {
   text-decoration: underline;
 }
 /* =========================
+   AUTO NAV SEPARATORS
+========================= */
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header nav a {
+  position: relative;
+  padding: 0 0.6rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Add | before every link except first */
+header nav a:not(:first-child)::before {
+  content: "|";
+  position: absolute;
+  left: -0.3rem;
+  color: var(--nav-link);
+  opacity: 0.7;
+}
+/* =========================
    MAIN CONTENT
 ========================= */
 
