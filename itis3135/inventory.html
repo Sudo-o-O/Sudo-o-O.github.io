@@ -3,18 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey | ITIS 3135</title>
+    <title>Inventory | ITIS 3135</title>
     <link rel="stylesheet" href="styles/default.css" />
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <div data-include="components/header.html"></div>
+
     <main>
-      <h2>Inventory / Table Project (content will be built here)</h2>
+      <h2>Glorious Misfit Inventory Ledger</h2>
+
       <p>
-        This page will contain my freeCodeCamp Survey Form certification
-        project.
+        The Glorious Misfit Guild keeps a small inventory of templates, tools,
+        and assets used to fix layouts, improve accessibility, and ship clean
+        pages.
       </p>
+
+      <section aria-label="Inventory summary">
+        <h3>Quick Summary</h3>
+        <ul>
+          <li><strong>Total categories:</strong> 4</li>
+          <li>
+            <strong>Most used item:</strong> Header/Footer Include Template
+          </li>
+          <li><strong>Current focus:</strong> Validation + contrast fixes</li>
+        </ul>
+      </section>
+
+      <section aria-label="Inventory table">
+        <h3>Inventory Table</h3>
+
+        <table>
+          <caption>
+            Guild inventory items and their current status
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Category</th>
+              <th scope="col">Condition</th>
+              <th scope="col">Qty</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Header/Footer Include Template</td>
+              <td>Template</td>
+              <td>Stable</td>
+              <td>1</td>
+              <td>Used across all ITIS pages</td>
+            </tr>
+
+            <tr>
+              <td>Contrast Check Guide</td>
+              <td>Guide</td>
+              <td>Updated</td>
+              <td>1</td>
+              <td>Run before Accumulus WCAG checks</td>
+            </tr>
+
+            <tr>
+              <td>Form Label Set</td>
+              <td>Component</td>
+              <td>Verified</td>
+              <td>1</td>
+              <td>Prevents missing-label errors</td>
+            </tr>
+
+            <tr>
+              <td>Raccoon Logo (SVG/PNG)</td>
+              <td>Asset</td>
+              <td>Clean</td>
+              <td>1</td>
+              <td>Used for firm branding</td>
+            </tr>
+
+            <tr>
+              <td>“Night Builder” Card Art</td>
+              <td>Art</td>
+              <td>Mint</td>
+              <td>1</td>
+              <td>Trading-card style illustration</td>
+            </tr>
+
+            <tr>
+              <td>“Patch Artist” Card Art</td>
+              <td>Art</td>
+              <td>Mint</td>
+              <td>1</td>
+              <td>Trading-card style illustration</td>
+            </tr>
+
+            <tr>
+              <td>“Rouge Design” Card Art</td>
+              <td>Art</td>
+              <td>Mint</td>
+              <td>1</td>
+              <td>Trading-card style illustration</td>
+            </tr>
+
+            <tr>
+              <td>Validator Links</td>
+              <td>Utility</td>
+              <td>Working</td>
+              <td>2</td>
+              <td>HTML + CSS validation URLs</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section aria-label="Inventory notes">
+        <h3>Notes</h3>
+        <p>
+          This ledger is intentionally simple: consistent structure, readable
+          layout, and valid markup. When we add new items, we keep names clear
+          so links and filenames don’t break when uploaded to a server.
+        </p>
+      </section>
     </main>
 
     <div data-include="components/footer.html"></div>
