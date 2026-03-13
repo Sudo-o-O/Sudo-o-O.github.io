@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homelab & Custom PC Building | Hobby Site</title>
+    <meta
+      name="description"
+      content="A single-page hobby site about homelab systems and custom PC building."
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+
+    <link rel="icon" href="images/favicon.ico" />
+
+    <link rel="manifest" href="images/site.webmanifest" />
+
+    <style>
+      :root {
+        --bg: #111827;
+        --surface: #1f2937;
+        --surface-2: #273449;
+        --card: #324259;
+        --text: #e5edf6;
+        --muted: #b9c6d8;
+        --accent: #67e8f9;
+        --accent-2: #fbbf24;
+        --accent-3: #a78bfa;
+        --border: #4b5d78;
+        --shadow: rgba(0, 0, 0, 0.28);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(
+          180deg,
+          #0f172a 0%,
+          #111827 45%,
+          #172033 100%
+        );
+        color: var(--text);
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+
+      header {
+        background: linear-gradient(
+          135deg,
+          #182235 0%,
+          #24314a 60%,
+          #1b2335 100%
+        );
+        border-bottom: 3px solid var(--accent-2);
+        box-shadow: 0 6px 18px var(--shadow);
+        padding: 1.5rem 1rem 1rem;
+      }
+
+      .site-wrap {
+        width: min(1100px, 94%);
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+        text-align: center;
+        color: var(--accent);
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        letter-spacing: 0.04em;
+      }
+
+      .tagline {
+        margin: 0 auto 1rem;
+        max-width: 800px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.45rem 0.75rem;
+        margin-top: 1rem;
+      }
+
+      nav button {
+        background: var(--surface);
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.65rem 1rem;
+        font: inherit;
+        cursor: pointer;
+        transition:
+          transform 0.18s ease,
+          background-color 0.18s ease,
+          color 0.18s ease;
+      }
+
+      nav button:hover,
+      nav button:focus {
+        background: var(--accent-3);
+        color: #ffffff;
+        transform: translateY(-1px);
+        outline: none;
+      }
+
+      nav button.active-tab {
+        background: var(--accent-2);
+        color: #111827;
+        border-color: var(--accent-2);
+        font-weight: bold;
+      }
+
+      .divider {
+        color: var(--accent-2);
+        font-size: 1rem;
+        user-select: none;
+      }
+
+      main {
+        width: min(1100px, 94%);
+        margin: 2rem auto;
+      }
+
+      section {
+        display: none;
+        background: rgba(31, 41, 55, 0.92);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 24px var(--shadow);
+      }
+
+      section.active-section {
+        display: block;
+      }
+
+      h2 {
+        margin-top: 0;
+        color: var(--accent-2);
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 0.5rem;
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        color: var(--accent);
+        margin-bottom: 0.35rem;
+      }
+
+      .intro-box,
+      .content-box {
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+
+      .grid-two {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      figure {
+        margin: 1.2rem 0;
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1rem;
+      }
+
+      figure img {
+        display: block;
+        width: 100%;
+        max-width: 760px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 12px;
+        border: 2px solid var(--border);
+      }
+
+      figcaption {
+        margin-top: 0.75rem;
+        text-align: center;
+        font-weight: bold;
+        color: var(--accent);
+      }
+
+      .prompt-note {
+        margin-top: 0.7rem;
+        color: var(--muted);
+        font-style: italic;
+        text-align: center;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.4rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 12px;
+        margin: 1rem 0;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--border);
+        padding: 0.8rem;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: #20304a;
+        color: var(--accent-2);
+      }
+
+      tr:nth-child(even) td {
+        background: rgba(255, 255, 255, 0.025);
+      }
+
+      .tip-list li {
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        margin-top: 2rem;
+        background: #182235;
+        border-top: 3px solid var(--accent-2);
+        padding: 1.5rem 1rem 2rem;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0.5rem 0;
+      }
+
+      .validation-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        margin-top: 0.75rem;
+      }
+
+      .validation-links a {
+        display: inline-block;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.55rem 0.9rem;
+      }
+
+      .small-note {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .sr-only {
+        position: absolute;
+        left: -9999px;
+      }
+
+      @media (max-width: 640px) {
+        header,
+        section,
+        footer {
+          padding-left: 0.9rem;
+          padding-right: 0.9rem;
+        }
+
+        nav {
+          gap: 0.5rem;
+        }
+
+        nav button {
+          width: 100%;
+        }
+
+        .divider {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="site-wrap">
+        <h1>Homelab &amp; Custom PC Building</h1>
+        <p class="tagline">
+          A hobby site about building powerful computers, experimenting with
+          servers, and creating a personal lab for learning, storage,
+          networking, and performance.
+        </p>
+
+        <nav aria-label="Hobby section navigation">
+          <button
+            class="tab-button active-tab"
+            data-target="what"
+            type="button"
+          >
+            What
+          </button>
+          <span class="divider">⬢</span>
+          <button class="tab-button" data-target="who" type="button">
+            Who
+          </button>
+          <span class="divider">⬢</span>
+          <button class="tab-button" data-target="when" type="button">
+            When
+          </button>
+          <span class="divider">⬢</span>
+          <button class="tab-button" data-target="where" type="button">
+            Where
+          </button>
+          <span class="divider">⬢</span>
+          <button class="tab-button" data-target="how" type="button">
+            How
+          </button>
+          <span class="divider">⬢</span>
+          <button class="tab-button" data-target="why" type="button">
+            Why
+          </button>
+          <span class="divider">⬢</span>
+          <button class="tab-button" data-target="ai-prompts" type="button">
+            AI Prompts
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="what" class="active-section">
+        <h2>What: What This Hobby Is</h2>
+
+        <div class="intro-box">
+          <p>
+            My hobby is building custom PCs and homelab systems. A custom PC is
+            a computer assembled from individually selected parts such as the
+            processor, graphics card, memory, cooling, and storage. A homelab is
+            a personal technology environment used to learn, test, and
+            experiment with servers, virtualization, networking, storage, and
+            automation.
+          </p>
+          <p>
+            This hobby combines creativity and technical skill. It is part
+            engineering project, part design project, and part learning
+            platform. Every build can be optimized for a different goal such as
+            gaming, video editing, virtualization, media storage, or learning
+            enterprise-style infrastructure.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <h3>Main Parts of the Hobby</h3>
+          <ul class="tip-list">
+            <li>Choosing computer components that work well together</li>
+            <li>Assembling and cable-managing the system cleanly</li>
+            <li>Installing operating systems, hypervisors, and services</li>
+            <li>Testing performance, cooling, storage, and reliability</li>
+          </ul>
+        </div>
+
+        <figure>
+          <img
+            src="images/what-homelab.png"
+            alt="A neatly organized custom computer and small homelab setup with monitors and networking equipment"
+          />
+          <figcaption>Custom PC and Homelab Workspace</figcaption>
+          <p class="prompt-note">
+            AI image prompt: “photorealistic custom PC desk setup with a small
+            home server, networking gear, dual monitors, cool blue lighting,
+            clean cable management, modern tech workspace”
+          </p>
+        </figure>
+      </section>
+
+      <section id="who">
+        <h2>Who: Who Enjoys This Hobby</h2>
+
+        <div class="intro-box">
+          <p>
+            Many kinds of people enjoy building PCs and homelabs. Students use
+            them to practice technical skills outside class. Gamers build
+            systems tailored to their favorite games. IT professionals use
+            homelabs to explore virtualization, storage, containers, and
+            cybersecurity tools. Hobbyists enjoy the process of planning,
+            building, tuning, and improving systems over time.
+          </p>
+        </div>
+
+        <div class="grid-two">
+          <div class="content-box">
+            <h3>Common People in the Hobby</h3>
+            <ul class="tip-list">
+              <li>Students learning hardware and networking</li>
+              <li>Gamers who want high performance and customization</li>
+              <li>Developers testing software and virtual machines</li>
+              <li>IT enthusiasts learning server and cloud concepts</li>
+            </ul>
+          </div>
+
+          <div class="content-box">
+            <h3>Why They Like It</h3>
+            <p>
+              People enjoy this hobby because it gives them control over the
+              system they use. It also helps them build practical experience
+              that connects directly to real-world computing jobs and personal
+              projects.
+            </p>
+          </div>
+        </div>
+
+        <table aria-label="Types of builders and their goals">
+          <thead>
+            <tr>
+              <th>Builder Type</th>
+              <th>Main Goal</th>
+              <th>Example Project</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Student</td>
+              <td>Learn core IT skills</td>
+              <td>Linux server with virtual machines</td>
+            </tr>
+            <tr>
+              <td>Gamer</td>
+              <td>Get top performance</td>
+              <td>High-refresh gaming PC</td>
+            </tr>
+            <tr>
+              <td>IT Enthusiast</td>
+              <td>Practice enterprise concepts</td>
+              <td>Rack server with storage and containers</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <figure>
+          <img
+            src="images/who_builder.png"
+            alt="A person assembling a custom desktop PC with tools and components spread across a desk"
+          />
+          <figcaption>Builders Learn by Doing</figcaption>
+          <p class="prompt-note">
+            AI image prompt: “photorealistic person building a custom desktop PC
+            at a workbench with motherboard, GPU, tools, and organized parts,
+            realistic indoor lighting”
+          </p>
+        </figure>
+      </section>
+
+      <section id="when">
+        <h2>When: Best Times to Work on the Hobby</h2>
+
+        <div class="intro-box">
+          <p>
+            This hobby usually happens during evenings, weekends, school breaks,
+            or any time someone can focus without rushing. Building a PC
+            carefully takes time, especially when installing parts, routing
+            cables, updating firmware, and testing system stability. Homelab
+            work often happens in phases, with planning first and upgrades
+            later.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <h3>Good Times for Different Tasks</h3>
+          <ol>
+            <li>Weeknights for research, software updates, and planning</li>
+            <li>Weekends for assembly, upgrades, and cable management</li>
+            <li>Semester breaks for larger rebuilds or rack projects</li>
+          </ol>
+        </div>
+
+        <table aria-label="Schedule of homelab and PC building activities">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Best Activity</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Evening</td>
+              <td>Research and software setup</td>
+              <td>Lower effort and easier to pause</td>
+            </tr>
+            <tr>
+              <td>Weekend</td>
+              <td>Assembly and testing</td>
+              <td>More uninterrupted time</td>
+            </tr>
+            <tr>
+              <td>Breaks / Holidays</td>
+              <td>Major rebuild or homelab expansion</td>
+              <td>Enough time for troubleshooting</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <figure>
+          <img
+            src="images/when_rack.png"
+            alt="A glowing server rack in a dark room with switches, cables, and status lights"
+          />
+          <figcaption>Weekend Upgrade Session</figcaption>
+          <p class="prompt-note">
+            AI image prompt: “photorealistic home server rack glowing in a dark
+            room, organized cables, switches and blinking status lights,
+            realistic tech photography”
+          </p>
+        </figure>
+      </section>
+
+      <section id="where">
+        <h2>Where: Best Places for the Hobby</h2>
+
+        <div class="intro-box">
+          <p>
+            A custom PC can be built almost anywhere with a stable table, good
+            lighting, and enough space to organize parts. Homelabs usually work
+            best in offices, spare rooms, basements, or dedicated corners where
+            sound, heat, and cables can be managed well. The location matters
+            because airflow, power, dust, and noise all affect the system.
+          </p>
+        </div>
+
+        <div class="grid-two">
+          <div class="content-box">
+            <h3>Good Build Locations</h3>
+            <ul class="tip-list">
+              <li>Desk or large table with room for parts</li>
+              <li>Cool room with good airflow</li>
+              <li>Area with reliable power and internet access</li>
+            </ul>
+          </div>
+
+          <div class="content-box">
+            <h3>Things to Avoid</h3>
+            <ul class="tip-list">
+              <li>Cluttered areas with little workspace</li>
+              <li>Hot rooms with poor ventilation</li>
+              <li>Dusty spaces or carpet-heavy areas when handling parts</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure>
+          <img
+            src="images/where_parts.png"
+            alt="Computer components arranged neatly on a desk including motherboard, memory, graphics card, and cooling parts"
+          />
+          <figcaption>Organized Parts Make Building Easier</figcaption>
+          <p class="prompt-note">
+            AI image prompt: “photorealistic computer parts laid out neatly on a
+            desk including motherboard, graphics card, RAM, fans, storage
+            drives, clean and organized workstation”
+          </p>
+        </figure>
+
+        <div class="content-box">
+          <p>
+            For a homelab, a room with shelves or a rack can make the project
+            feel much more professional. It also helps separate experimental
+            gear from daily-use devices.
+          </p>
+        </div>
+      </section>
+
+      <section id="how">
+        <h2>How: How to Get Started</h2>
+
+        <div class="intro-box">
+          <p>
+            The best way to start is with a simple goal. For example, someone
+            might want to build a gaming PC, a file server, or a small
+            virtualization host. After choosing the goal, the next steps are
+            selecting compatible parts, assembling the hardware carefully,
+            installing the software, and testing the final system.
+          </p>
+        </div>
+
+        <table aria-label="Steps to start building a custom PC or homelab">
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Action</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Choose a goal</td>
+              <td>
+                Know whether the system is for gaming, storage, or learning
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Select compatible parts</td>
+              <td>Avoid hardware mismatch problems</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Assemble the hardware</td>
+              <td>Create a working physical system</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Install software</td>
+              <td>Set up the operating system or hypervisor</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Test and improve</td>
+              <td>Check temperatures, performance, and stability</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="content-box">
+          <h3>Starter Advice</h3>
+          <ul class="tip-list">
+            <li>Start smaller than your dream setup, then grow it over time</li>
+            <li>Read hardware compatibility before ordering parts</li>
+            <li>Label cables and document what each device does</li>
+            <li>Keep backups if your homelab stores important files</li>
+          </ul>
+        </div>
+
+        <figure>
+          <img
+            src="images/how_build.png"
+            alt="A custom PC mid-assembly with cables, cooling, tools, and an open case on a desk"
+          />
+          <figcaption>Building Step by Step</figcaption>
+          <p class="prompt-note">
+            AI image prompt: “photorealistic custom computer being assembled in
+            an open case, visible cables, tools, fans, and cooling components,
+            realistic detailed tech scene”
+          </p>
+        </figure>
+      </section>
+
+      <section id="why">
+        <h2>Why: Why I Enjoy This Hobby</h2>
+
+        <div class="intro-box">
+          <p>
+            I like this hobby because it mixes problem solving, creativity, and
+            real technical skill. Every project has design choices, performance
+            tradeoffs, and practical goals. It is rewarding to start with
+            separate parts and end with a working system that is useful,
+            powerful, and personalized.
+          </p>
+          <p>
+            This hobby also connects strongly to my academic and professional
+            interests. It builds experience with hardware, virtualization,
+            networking, storage, and systems thinking. In other words, it is
+            fun, but it also teaches useful skills that matter outside the hobby
+            itself.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <h3>Reasons This Hobby Matters to Me</h3>
+          <ul class="tip-list">
+            <li>It helps me understand how computing systems really work</li>
+            <li>It supports learning related to IT and infrastructure</li>
+            <li>It allows me to create systems built for my own needs</li>
+            <li>It is satisfying to improve and upgrade projects over time</li>
+          </ul>
+        </div>
+
+        <figure>
+          <img
+            src="images/why_server.png"
+            alt="A polished futuristic homelab setup with glowing server lights and a custom PC in the same room"
+          />
+          <figcaption>Learning Through Building and Experimentation</figcaption>
+          <p class="prompt-note">
+            AI image prompt: “photorealistic futuristic homelab room with custom
+            PC, glowing server rack, modern lighting, clean layout, realistic
+            detailed technology environment”
+          </p>
+        </figure>
+      </section>
+
+      <section id="ai-prompts">
+        <h2>AI Prompts: How AI Was Used</h2>
+
+        <div class="content-box">
+          <p><strong>AI model used:</strong> ChatGPT</p>
+          <p>
+            <strong>Purpose:</strong> brainstorming hobby page structure,
+            helping write section content, and organizing and creating image
+            prompts.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <h3>Main Prompts Used</h3>
+          <ol>
+            <li>
+              “Help me plan a single-page hobby site about homelabs and custom
+              PC building. I want to include sections for what, who, when,
+              where, how, and why, plus a section about how I used AI to create
+              the site."
+            </li>
+            <li>
+              “What should I put in for the text content for these sections?”
+            </li>
+            <li>
+              “Check if I am missing any important information for the rubrick
+              sections and suggest improvements.”
+            </li>
+          </ol>
+        </div>
+
+        <figure>
+          <img
+            src="images/ai_concept.png"
+            alt="Stylized concept art of a homelab and custom PC design planning board"
+          />
+          <figcaption>AI-Assisted Planning for the Hobby Site</figcaption>
+          <p class="prompt-note">
+            AI image prompt: “clean concept art style planning board showing a
+            custom PC build, homelab rack, sketches, diagrams, and a polished
+            modern tech design theme”
+          </p>
+        </figure>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Designed by
+        <a href="../gloriousmisfitwebdesign.com/index.html"
+          >Glorious Misfit Web Design</a
+        >
+      </p>
+
+      <p class="small-note">Validation and accessibility tools:</p>
+
+      <div class="validation-links">
+        <a href="https://validator.w3.org/">HTML Validator</a>
+        <a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a>
+        <a href="https://wave.webaim.org/">Accessibility Check</a>
+      </div>
+    </footer>
+
+    <script>
+      const buttons = document.querySelectorAll(".tab-button");
+      const sections = document.querySelectorAll("main section");
+
+      function showSection(targetId) {
+        sections.forEach((section) => {
+          section.classList.remove("active-section");
+        });
+
+        buttons.forEach((button) => {
+          button.classList.remove("active-tab");
+          button.setAttribute("aria-pressed", "false");
+        });
+
+        const selectedSection = document.getElementById(targetId);
+        const selectedButton = document.querySelector(
+          `.tab-button[data-target="${targetId}"]`,
+        );
+
+        if (selectedSection) {
+          selectedSection.classList.add("active-section");
+        }
+
+        if (selectedButton) {
+          selectedButton.classList.add("active-tab");
+          selectedButton.setAttribute("aria-pressed", "true");
+        }
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          showSection(button.dataset.target);
+        });
+      });
+
+      showSection("what");
+    </script>
+  </body>
+</html>
