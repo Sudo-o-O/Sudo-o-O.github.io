@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaultImage = document.getElementById("defaultImage");
 
   function escapeHtml(value) {
-    return String(value ?? "")
+    return String(value || "")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
