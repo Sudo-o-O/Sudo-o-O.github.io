@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction Form | Matthew R. Gibbs</title>
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/default.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+  </head>
+  <body>
+    <div data-include="components/header.html"></div>
+    <main id="mainContent">
+      <h2>Introduction Form</h2>
+      <h3>Please submit the form below.</h3>
+
+      <form id="form">
+        <section class="compact-grid three-col">
+          <h3>Name and Mascot</h3>
+
+          <div>
+            <label for="firstName">First Name</label>
+            <input
+              id="firstName"
+              name="firstName"
+              type="text"
+              value="Matthew"
+              placeholder="Enter first name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="middleName">Middle Name / Initial</label>
+            <input
+              id="middleName"
+              name="middleName"
+              type="text"
+              value="R."
+              placeholder="Enter middle name or initial"
+            />
+          </div>
+
+          <div>
+            <label for="nickname">Nickname / Preferred Name</label>
+            <input
+              id="nickname"
+              name="nickname"
+              type="text"
+              value=""
+              placeholder="Enter nickname or preferred name"
+            />
+          </div>
+
+          <div>
+            <label for="lastName">Last Name</label>
+            <input
+              id="lastName"
+              name="lastName"
+              type="text"
+              value="Gibbs"
+              placeholder="Enter last name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="mascotAdjective">Mascot Adjective</label>
+            <input
+              id="mascotAdjective"
+              name="mascotAdjective"
+              type="text"
+              value="Glorious"
+              placeholder="Enter mascot adjective"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="mascotAnimal">Mascot Animal</label>
+            <input
+              id="mascotAnimal"
+              name="mascotAnimal"
+              type="text"
+              value="Misfit"
+              placeholder="Enter mascot animal"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="divider">Divider</label>
+            <input
+              id="divider"
+              name="divider"
+              type="text"
+              value="|"
+              placeholder="Example: | or ~ or ★"
+              required
+            />
+          </div>
+        </section>
+
+        <section class="compact-grid two-col">
+          <h3>Acknowledgment</h3>
+
+          <div class="span-2">
+            <label for="acknowledgment">Acknowledgment Statement</label>
+            <textarea
+              id="acknowledgment"
+              name="acknowledgment"
+              placeholder="Enter acknowledgment statement"
+              required
+            >
+I understand that what I put here is publicly available on the web and I won’t put anything here I don’t want the public to see. — MRG</textarea
+            >
+          </div>
+
+          <div>
+            <label for="ackDate">Acknowledgment Date</label>
+            <input
+              id="ackDate"
+              name="ackDate"
+              type="text"
+              value="1/13/2026"
+              placeholder="Enter date"
+              required
+            />
+          </div>
+        </section>
+
+        <section>
+          <h3>Picture</h3>
+
+          <input
+            type="hidden"
+            id="defaultImage"
+            name="defaultImage"
+            value="images/profile-landscape.jpeg"
+          />
+
+          <div class="file-row">
+            <label for="image">Upload a Picture</label>
+            <input id="image" name="image" type="file" accept="image/*" />
+          </div>
+
+          <figure class="compact-figure">
+            <img
+              id="imagePreview"
+              src="images/profile-landscape.jpeg"
+              alt="Photo of Matthew R. Gibbs"
+              width="250"
+            />
+            <figcaption>
+              <em id="previewCaption">Photo of Matthew R. Gibbs</em>
+            </figcaption>
+          </figure>
+
+          <div class="compact-width">
+            <label for="imageCaption">Picture Caption</label>
+            <input
+              id="imageCaption"
+              name="imageCaption"
+              type="text"
+              value="Photo of Matthew R. Gibbs"
+              placeholder="Enter picture caption"
+              required
+            />
+          </div>
+        </section>
+
+        <section class="compact-grid two-col">
+          <h3>Introduction Content</h3>
+
+          <div>
+            <label for="personalStatement">Personal Statement</label>
+            <textarea
+              id="personalStatement"
+              name="personalStatement"
+              placeholder="Enter your personal statement"
+              required
+            >
+I’m a senior at UNC Charlotte pursuing a double major in Computer Science with a concentration in Information Technology and Japanese. I enjoy working across both frontend and backend development, building web applications, and gaining hands-on experience with virtual machines, networking, and server infrastructure to better understand how systems and data operate in real-world environments.</textarea
+            >
+          </div>
+
+          <div>
+            <label for="personalBackground">Personal Background</label>
+            <textarea
+              id="personalBackground"
+              name="personalBackground"
+              placeholder="Enter personal background"
+              required
+            >
+Outside of academics, I enjoy watching anime, reading, and working on hands-on projects such as 3D printing and experimenting with emulation software.</textarea
+            >
+          </div>
+
+          <div>
+            <label for="academicBackground">Academic Background</label>
+            <textarea
+              id="academicBackground"
+              name="academicBackground"
+              placeholder="Enter academic background"
+              required
+            >
+I am currently a senior at UNC Charlotte completing a double major in Computer Science (IT concentration) and Japanese.</textarea
+            >
+          </div>
+
+          <div>
+            <label for="professionalBackground">Professional Background</label>
+            <textarea
+              id="professionalBackground"
+              name="professionalBackground"
+              placeholder="Enter professional background"
+              required
+            >
+I currently work in customer service within the insurance industry, where I regularly communicate with clients and translate complex policy or system-related information into clear, understandable terms.</textarea
+            >
+          </div>
+
+          <div>
+            <label for="careerGoals">Academic &amp; Career Goals</label>
+            <textarea
+              id="careerGoals"
+              name="careerGoals"
+              placeholder="Enter academic and career goals"
+              required
+            >
+After completing my undergraduate degrees, I plan to pursue an MS in Management. My goal is to combine a solid technical foundation in Computer Science with leadership and management skills so I can work as a technical liaison between engineering teams, IT staff, and non-technical stakeholders.</textarea
+            >
+          </div>
+
+          <div>
+            <label for="subjectBackground">Background in This Subject</label>
+            <textarea
+              id="subjectBackground"
+              name="subjectBackground"
+              placeholder="Enter subject background"
+              required
+            >
+I was first introduced to web development in high school while helping build and maintain a website for my school’s robotics team.</textarea
+            >
+          </div>
+
+          <div>
+            <label for="primaryComputer">Primary Work Computer</label>
+            <textarea
+              id="primaryComputer"
+              name="primaryComputer"
+              placeholder="Enter primary work computer"
+              required
+            >
+16-inch MacBook Pro (M4) with two external monitors.</textarea
+            >
+          </div>
+
+          <div>
+            <label for="backupComputer"
+              >Backup Work Computer &amp; Location Plan</label
+            >
+            <textarea
+              id="backupComputer"
+              name="backupComputer"
+              placeholder="Enter backup work computer"
+              required
+            >
+Mini PC available as a backup system.</textarea
+            >
+          </div>
+
+          <div>
+            <label for="funnyThing"
+              >Funny / Interesting item to remember me by</label
+            >
+            <textarea
+              id="funnyThing"
+              name="funnyThing"
+              placeholder="Enter a funny or interesting fact"
+            >
+My heart has stopped four times over the course of my life.</textarea
+            >
+          </div>
+
+          <div>
+            <label for="share">Something I’d also like to share</label>
+            <textarea
+              id="share"
+              name="share"
+              placeholder="Enter something you'd like to share"
+            >
+I’m one-quarter Native American.</textarea
+            >
+          </div>
+        </section>
+
+        <section>
+          <h3>Courses I’m Taking &amp; Why</h3>
+
+          <div id="courseList">
+            <div class="course-entry">
+              <div>
+                <label>Department</label>
+                <input
+                  name="courseDepartment"
+                  type="text"
+                  value="ITSC"
+                  placeholder="Department"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Number</label>
+                <input
+                  name="courseNumber"
+                  type="text"
+                  value="3146"
+                  placeholder="Course number"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Name</label>
+                <input
+                  name="courseName"
+                  type="text"
+                  value="Introduction to Operating Systems and Networking"
+                  placeholder="Course name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Reason</label>
+                <input
+                  name="courseReason"
+                  type="text"
+                  value="Required course focusing on operating system fundamentals and networking concepts."
+                  placeholder="Reason for taking the course"
+                  required
+                />
+              </div>
+
+              <div class="course-delete-wrap">
+                <button type="button" class="delete-course">Delete</button>
+              </div>
+            </div>
+
+            <div class="course-entry">
+              <div>
+                <label>Department</label>
+                <input
+                  name="courseDepartment"
+                  type="text"
+                  value="ITSC"
+                  placeholder="Department"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Number</label>
+                <input
+                  name="courseNumber"
+                  type="text"
+                  value="3160"
+                  placeholder="Course number"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Name</label>
+                <input
+                  name="courseName"
+                  type="text"
+                  value="Database Design and Implementation"
+                  placeholder="Course name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Reason</label>
+                <input
+                  name="courseReason"
+                  type="text"
+                  value="Required course covering data modeling and relational databases."
+                  placeholder="Reason for taking the course"
+                  required
+                />
+              </div>
+
+              <div class="course-delete-wrap">
+                <button type="button" class="delete-course">Delete</button>
+              </div>
+            </div>
+
+            <div class="course-entry">
+              <div>
+                <label>Department</label>
+                <input
+                  name="courseDepartment"
+                  type="text"
+                  value="ITIS"
+                  placeholder="Department"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Number</label>
+                <input
+                  name="courseNumber"
+                  type="text"
+                  value="3135"
+                  placeholder="Course number"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Name</label>
+                <input
+                  name="courseName"
+                  type="text"
+                  value="Front-End Web Application Development"
+                  placeholder="Course name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Reason</label>
+                <input
+                  name="courseReason"
+                  type="text"
+                  value="Required course emphasizing modern frontend development and user experience."
+                  placeholder="Reason for taking the course"
+                  required
+                />
+              </div>
+
+              <div class="course-delete-wrap">
+                <button type="button" class="delete-course">Delete</button>
+              </div>
+            </div>
+
+            <div class="course-entry">
+              <div>
+                <label>Department</label>
+                <input
+                  name="courseDepartment"
+                  type="text"
+                  value="JAPN"
+                  placeholder="Department"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Number</label>
+                <input
+                  name="courseNumber"
+                  type="text"
+                  value="3201"
+                  placeholder="Course number"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Name</label>
+                <input
+                  name="courseName"
+                  type="text"
+                  value="Upper Intermediate Japanese"
+                  placeholder="Course name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label>Reason</label>
+                <input
+                  name="courseReason"
+                  type="text"
+                  value="Major requirement focused on advanced reading, writing, and professional communication."
+                  placeholder="Reason for taking the course"
+                  required
+                />
+              </div>
+
+              <div class="course-delete-wrap">
+                <button type="button" class="delete-course">Delete</button>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" id="addCourseBtn">Add Course</button>
+        </section>
+
+        <section class="compact-grid two-col">
+          <h3>Quote and Links</h3>
+
+          <div>
+            <label for="quote">Quote</label>
+            <input
+              id="quote"
+              name="quote"
+              type="text"
+              value="Fall seven times, stand up eight."
+              placeholder="Enter quote"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="quoteAuthor">Quote Author</label>
+            <input
+              id="quoteAuthor"
+              name="quoteAuthor"
+              type="text"
+              value="Japanese Proverb"
+              placeholder="Enter quote author"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="githubPages">GitHub.io</label>
+            <input
+              id="githubPages"
+              name="githubPages"
+              type="url"
+              value="https://sudo-o-o.github.io/"
+              placeholder="Enter GitHub Pages URL"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="github">GitHub</label>
+            <input
+              id="github"
+              name="github"
+              type="url"
+              value="https://github.com/Sudo-o-O"
+              placeholder="Enter GitHub URL"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="charlotteWeb">CLT Web</label>
+            <input
+              id="charlotteWeb"
+              name="charlotteWeb"
+              type="url"
+              value="https://webpages.charlotte.edu/mgibbs13"
+              placeholder="Enter Charlotte Web URL"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="freeCodeCamp">freeCodeCamp</label>
+            <input
+              id="freeCodeCamp"
+              name="freeCodeCamp"
+              type="url"
+              value="https://www.freecodecamp.org/Glorious-Misfit"
+              placeholder="Enter freeCodeCamp URL"
+              required
+            />
+          </div>
+
+          <div class="span-2 compact-width">
+            <label for="linkedin">LinkedIn</label>
+            <input
+              id="linkedin"
+              name="linkedin"
+              type="url"
+              value="https://www.linkedin.com/in/gibbsrmatthew/"
+              placeholder="Enter LinkedIn URL"
+              required
+            />
+          </div>
+        </section>
+
+        <section class="form-buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+          <button type="button" id="clearBtn">Clear</button>
+          <button type="button" id="jsonBtn">Generate JSON</button>
+          <button type="button" id="htmlBtn">Generate HTML</button>
+        </section>
+      </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="scripts/htmlinclude.js"></script>
+    <script src="scripts/introduction.js"></script>
+    <script src="scripts/generate_json.js"></script>
+    <script src="scripts/generate_html.js"></script>
+  </body>
+</html>
