@@ -255,13 +255,13 @@ footer a:focus {
    CARDS PAGE (FCC style)
 ========================= */
 
-.card-grid {
+.card-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 1rem;
 }
 
-.card-grid > * {
+.card-layout > * {
   margin: 0.5rem;
 }
 
@@ -416,21 +416,20 @@ button:focus {
   margin-bottom: 1.5rem;
 }
 
-.compact-grid {
+.compact-layout {
   display: grid;
   align-items: start;
 }
 
-.compact-grid > * {
+.compact-layout > * {
   margin-bottom: 0.75rem;
   margin-right: 1rem;
 }
 
-.compact-grid h3 {
+.compact-layout > :first-child {
   grid-column: 1 / -1;
   margin-bottom: 0.25rem;
 }
-
 .three-col {
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -533,8 +532,8 @@ code {
   .three-col,
   .two-col,
   .course-entry,
-  .card-grid,
-  .pricing-grid {
+  .card-layout,
+  .pricing-layout {
     grid-template-columns: 1fr;
   }
 
@@ -690,13 +689,13 @@ td {
   margin-top: 2rem;
 }
 
-.pricing-grid {
+.pricing-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 1rem;
 }
 
-.pricing-grid > * {
+.pricing-layout > * {
   margin: 0.5rem;
 }
 
