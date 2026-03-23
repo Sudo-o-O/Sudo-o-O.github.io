@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "prettier.trailingComma": "none",
+
+  "editor.codeActionsOnSave": {},
+
+  "javascript.format.enable": false,
+  "typescript.format.enable": false
+}
