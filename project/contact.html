@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Got Big Melons | Contact</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Got Big Melons</h1>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="varieties.html">Varieties</a>
+        <a href="growing-tips.html">Growing Tips</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="fun-facts.html">Fun Facts</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <h2>Contact Us</h2>
+
+      <p>
+        Have a favorite watermelon variety or a fun fact to share? Use the form
+        below to send a message.
+      </p>
+
+      <section class="card">
+        <form onsubmit="handleFormSubmit(event)">
+          <p>
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required />
+          </p>
+
+          <p>
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required />
+          </p>
+
+          <p>
+            <label for="subject">Subject:</label><br />
+            <input type="text" id="subject" name="subject" required />
+          </p>
+
+          <p>
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </p>
+
+          <p>
+            <button type="submit">Send Message</button>
+            <button type="reset">Clear Form</button>
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h3>Why Contact This Site?</h3>
+        <p>
+          Visitors can use this page to ask questions, suggest new watermelon
+          varieties, or share interesting facts and growing tips.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Page built by
+        <a
+          href="https://webpages.charlotte.edu/mgibbs13/itis3135/gloriousmisfitwebdesign.com/index.html"
+        >
+          Glorious Misfit Web Design
+        </a>
+        &copy; 2026
+      </p>
+    </footer>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
