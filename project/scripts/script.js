@@ -61,15 +61,23 @@ const facts = [
   "Watermelon can be carved into decorative shapes.",
   "It is a popular fruit at picnics and barbecues.",
   "Watermelon is naturally fat-free.",
-  "It has a sweet, refreshing taste loved worldwide.",
+  "It has a sweet, refreshing taste loved worldwide."
 ];
 
 function showRandomFact() {
   const randomIndex = Math.floor(Math.random() * facts.length);
   const factElement = document.getElementById("random-fact");
+  const imageElement = document.getElementById("random-image");
 
+  // Update fact
   if (factElement) {
     factElement.textContent = facts[randomIndex];
+  }
+
+  // Update image (NOW using .jpeg)
+  if (imageElement) {
+    const imageIndex = Math.floor(Math.random() * 6) + 1;
+    imageElement.src = `images/gallery${imageIndex}.jpeg`;
   }
 }
 
@@ -77,9 +85,108 @@ function showRandomFact() {
    Simple Form Feedback
 ========================= */
 
+const form = document.getElementById("contact-form");
+const formMessage = document.getElementById("form-message");
+
 function handleFormSubmit(event) {
   event.preventDefault();
-  alert("Thanks for your message! 🍉");
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !subject || !message) {
+    formMessage.textContent = "❌ Please fill out all fields.";
+    formMessage.className = "error-message";
+
+    setTimeout(() => {
+      formMessage.textContent = "";
+      formMessage.className = "";
+    }, 5000);
+
+    return;
+  }
+
+  formMessage.textContent = "✅ Thanks for your message! 🍉";
+  formMessage.className = "success-message";
+  formMessage.style.opacity = "1";
+
+  setTimeout(() => {
+    form.reset();
+    formMessage.textContent = "";
+    formMessage.className = "";
+    formMessage.style.opacity = "";
+  }, 5000);
+}
+
+if (form) {
+  form.addEventListener("reset", () => {
+    formMessage.textContent = "";
+    formMessage.className = "";
+    formMessage.style.opacity = "";
+  });
+}
+
+/* =========================
+   Gallery Slideshow
+========================= */
+
+const galleryImages = [
+  "images/gallery1.jpeg",
+  "images/gallery2.jpeg",
+  "images/gallery3.jpeg",
+  "images/gallery4.jpeg",
+  "images/gallery5.jpeg",
+  "images/gallery6.jpeg"
+];
+
+let currentImageIndex = 0;
+
+function updateImage() {
+  const galleryImage = document.getElementById("gallery-image");
+  if (galleryImage) {
+    galleryImage.src = galleryImages[currentImageIndex];
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const nextBtn = document.getElementById("next-btn");
+  const prevBtn = document.getElementById("prev-btn");
+
+  if (nextBtn && prevBtn) {
+    nextBtn.addEventListener("click", () => {
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      updateImage();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentImageIndex =
+        (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      updateImage();
+    });
+  }
+});
+
+/* =========================
+   Variety Filter
+========================= */
+function showMelonInfo(type) {
+  const info = document.getElementById("melon-info");
+
+  const melonDetails = {
+    seeded:
+      "Seeded watermelons have a classic, rich flavor and contain black seeds.",
+    seedless:
+      "Seedless watermelons are easier to eat and are very popular today.",
+    yellow: "Yellow watermelons are sweeter and have a honey-like flavor.",
+    orange: "Orange watermelons have a tropical taste and are less common.",
+    icebox: "Icebox watermelons are small and perfect for personal servings."
+  };
+
+  if (info && melonDetails[type]) {
+    info.textContent = melonDetails[type];
+  }
 }
 
 /* =========================
