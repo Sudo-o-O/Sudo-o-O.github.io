@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
-  <body class=""varieties-page">
+  <body class="varieties-page">
     <!-- Header -->
     <header>
       <h1>Got Big Melons</h1>
@@ -33,9 +33,15 @@
         something different in taste and appearance.
       </p>
 
+      <!-- Interactive Info Box -->
+      <section class="interactive-box">
+        <h3>Watermelon Info</h3>
+        <p id="melon-info">Click a watermelon to learn more about it!</p>
+      </section>
+
       <!-- Variety Cards -->
       <section class="card-container">
-        <div class="card">
+        <div class="card" onclick="showMelonInfo('seeded')">
           <h3>Seeded Watermelon</h3>
           <img src="images/seeded.jpeg" alt="Seeded watermelon" />
           <p>
@@ -44,7 +50,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="showMelonInfo('seedless')">
           <h3>Seedless Watermelon</h3>
           <img src="images/seedless.jpeg" alt="Seedless watermelon" />
           <p>
@@ -53,7 +59,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="showMelonInfo('yellow')">
           <h3>Yellow Watermelon</h3>
           <img src="images/yellow.jpeg" alt="Yellow watermelon" />
           <p>
@@ -61,7 +67,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="showMelonInfo('orange')">
           <h3>Orange Watermelon</h3>
           <img src="images/orange.jpeg" alt="Orange watermelon" />
           <p>
@@ -70,7 +76,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" onclick="showMelonInfo('icebox')">
           <h3>Icebox Watermelon</h3>
           <img src="images/icebox.jpeg" alt="Small watermelon" />
           <p>
@@ -85,12 +91,15 @@
     <footer>
       <p>
         Page built by
-        <a href="https://webpages.charlotte.edu/mgibbs13/itis3135/gloriousmisfitwebdesign.com/index.html">
-        Glorious Misfit Web Design
+        <a
+          href="https://webpages.charlotte.edu/mgibbs13/itis3135/gloriousmisfitwebdesign.com/index.html"
+        >
+          Glorious Misfit Web Design
         </a>
         &copy; 2026
       </p>
     </footer>
+
     <script src="scripts/script.js"></script>
   </body>
 </html>
