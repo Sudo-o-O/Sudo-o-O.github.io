@@ -233,3 +233,24 @@ button:hover {
 #form-message {
   transition: opacity 0.5s ease;
 }
+
+/* Footer Validation Links */
+
+.validation-links {
+  margin-top: 0.75rem;
+}
+
+.validation-links a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.validation-links a:hover {
+  color: #ff4d4d;
+}
+
+.validation-links {
+  text-align: center;
+}
